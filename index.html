@@ -17,6 +17,7 @@
                     <img src="images/landing-page-logo.png" class="img-fluid logo-image" alt="logo">
                 </div>
                 <div class="col-lg-6 form ">
+                    <div id="frist-form" >
                     
                         <div class=" form-f d-flex flex-column align-items-center justify-content-center">
                             <p class="text-center start-form ">WELCOME BUDDY</p>
@@ -24,9 +25,10 @@
                             <p class="text-center start-form fs-5 pt-2 pb-4 fw-semibold">Please log in to access this page</p>
                             <div class="start-form ">
                                 <button onclick="showform()" class="btn-1">Log-IN</button>
-                                <button class="btn-1">Sign-UP</button>
+                                <button onclick="signup()" class="btn-1">Sign-UP</button>
                             </div>
                         </div>
+                    </div>
                         
                     <div class="head-1">
                         <p class="text-center login-form ">Login Form</p>
@@ -34,7 +36,7 @@
 
                     </div>
                    
-                    <form class="login-form form-pad">
+                    <form class="login-form form-pad" id="login-form">
                         <div class="row  d-flex ">
                             <div class="col-lg-10 col-md-10 offset-lg-2 offset-md-2">
                             <label for="name">Name</label><br>
@@ -51,11 +53,11 @@
                             
                         </div>
                             <div class="col-lg-10 col-md-10 offset-md-2 offset-lg-2 d-flex ">
-                                <input type="submit" value="Sign UP" class="submit"  id="submit">
+                                <input type="submit" value="Log-IN" class="submit"  id="submit">
                             </div>
                         
                     </form>
-                    <form class="signup-form form-pad">
+                    <form class="signup-form form-pad" onsubmit="login(); return false">
                         <div class="row  d-flex ">
                             <div class="col-lg-6 col-md-5 offset-md-1 offset-lg-0">
                             <label for="name">Name</label><br>
@@ -91,7 +93,7 @@
                             </div>
                         </div>
                             <div class="col-lg-10 col-md-10 offset-md-2">
-                                <input type="submit" value="Sign UP" class="submit" id="submit">
+                                <input type="submit" value="Sign UP"  class="submit" id="submit">
                             </div>
                         
                     </form>
