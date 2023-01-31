@@ -30,4 +30,25 @@ function signup(){
   
    }
   }
+  function password(){
+   var pass = document.getElementsByClassName('form-input')
+   if(pass[2].type === "password"){
+      pass[2].type = "text";
+      document.getElementById('eye-1').style.display = 'none';
+      document.getElementById('eye-2').style.display = 'inline';
+   }
+   else{
+      paas[2].type = "password";
+   }
+  }
+  function repassword(){
+   var pass = document.getElementsByClassName('form-input')
+ if(pass[2].type === "text"){
+      pass[2].type === "password"
+      document.getElementById('eye-2').style.display = 'none';
+      document.getElementById('eye-1').style.display = 'inline';
+ }
+     
+   }
+ 
 

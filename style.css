@@ -58,6 +58,16 @@
     font-size: 17px;
     margin: 0 10px;
 }
+.eye{
+    position: absolute;
+    cursor: pointer;
+    bottom: 48px;
+    right: 130px;
+    text-align: right;
+}
+#eye-2{
+    display: none;
+}
 @media only screen and (max-width: 600px){
     .form-pad{
         padding: 0 3.8rem !important
@@ -73,6 +83,13 @@
    .form-f{
     height: 108vmin;
    }
+   .eye {
+    position: relative;
+    /* display: block; */
+    bottom: 50px;
+    right: 12px;
+    text-align: right;
+}
 
 }
 @media only screen and (min-width: 768px){
@@ -86,6 +103,13 @@
    }
    .login-form .form-input{
     width: 75%;
+}
+.eye {
+    position: absolute;
+  
+    bottom: 245px;
+    right: 189px;
+    text-align: right;
 }
   
 }
@@ -110,6 +134,12 @@
 }
 .login-form .form-input{
     width: 75%;
+}
+.eye {
+    position: relative;
+    bottom: 51px;
+    right: -319px;
+    text-align: right;
 }
    
 }
