@@ -32,15 +32,21 @@ function signup(){
   }
   function password(){
    var pass = document.getElementsByClassName('form-input')
-   if(pass[2].type === "password"){
+   if(pass[2].type === "password"||pass[9].type === "password"||pass[10].type === "password"){
       pass[2].type = "text";
+      pass[9].type = "text";
+      pass[10].type = "text";
+
       document.getElementById('eye-1').style.display = 'none';
       document.getElementById('eye-2').style.display = 'inline';
    }
    else{
       pass[2].type = "password";
-      document.getElementById('eye-1').style.display = 'inline';
+      pass[9].type = "password";
+      pass[10].type = "password";
       document.getElementById('eye-2').style.display = 'none';
+      document.getElementById('eye-1').style.display = 'inline';
+
       
    }
   }

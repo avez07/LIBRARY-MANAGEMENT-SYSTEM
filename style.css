@@ -67,6 +67,20 @@
 #eye-2{
     display: none;
 }
+.eye-e {
+    position: absolute;
+    display: inline-block;
+    bottom: -11px;
+    right: 67px ;
+    text-align: right;
+}
+.eye-f {
+    position: absolute;
+    display: inline-block;
+    bottom: -11px;
+    right: 354px ;
+    text-align: right;
+}
 @media only screen and (max-width: 767px){
     .form-pad{
         padding: 0 3.8rem !important
@@ -88,6 +102,19 @@
     bottom: 23px;
     right: 10px;
     text-align: right;
+}
+.eye-e {
+    position: relative;
+    bottom: 25px;
+    right: 15px;
+    float: right;
+}
+.eye-f {
+    position: relative;
+   
+    bottom: 25px;
+    right: 15px;
+    float: right;
 }
 
 }
@@ -111,9 +138,15 @@
 }
 .eye-e {
     position: relative;
-    bottom: 27px;
-    left: 290px;
-    text-align: right;
+    bottom: 24px;
+    right: 13px;
+    float: right;
+}
+.eye-f {
+    position: relative;
+    bottom: 25px;
+    right: 10px;
+    float: right !important;
 }
   
 }
@@ -144,6 +177,18 @@
     bottom: 0;
     right: 27px;
     text-align: right;
+}
+.eye-f {
+    position: relative;
+    /* bottom: -11px; */
+    /* right: 364px; */
+    float: right !important;
+}
+.eye-e {
+    position: relative;
+    bottom: 25px;
+    /* right: 69px; */
+    float: right;
 }
    
 }
