@@ -58,17 +58,16 @@
     font-size: 17px;
     margin: 0 10px;
 }
-.eye{
-    position: absolute;
-    cursor: pointer;
-    bottom: 48px;
-    right: 130px;
+.eye {
+    position: relative;
+    bottom: 0;
+    right: 27px;
     text-align: right;
 }
 #eye-2{
     display: none;
 }
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 767px){
     .form-pad{
         padding: 0 3.8rem !important
        
@@ -85,9 +84,9 @@
    }
    .eye {
     position: relative;
-    /* display: block; */
-    bottom: 50px;
-    right: 12px;
+    display: block;
+    bottom: 23px;
+    right: 10px;
     text-align: right;
 }
 
@@ -105,10 +104,15 @@
     width: 75%;
 }
 .eye {
-    position: absolute;
-  
-    bottom: 245px;
-    right: 189px;
+    position: relative;
+    bottom: 0;
+    right: 28px;
+    text-align: right;
+}
+.eye-e {
+    position: relative;
+    bottom: 27px;
+    left: 290px;
     text-align: right;
 }
   
@@ -137,8 +141,8 @@
 }
 .eye {
     position: relative;
-    bottom: 51px;
-    right: -319px;
+    bottom: 0;
+    right: 27px;
     text-align: right;
 }
    

@@ -38,17 +38,14 @@ function signup(){
       document.getElementById('eye-2').style.display = 'inline';
    }
    else{
-      paas[2].type = "password";
+      pass[2].type = "password";
+      document.getElementById('eye-1').style.display = 'inline';
+      document.getElementById('eye-2').style.display = 'none';
+      
    }
   }
-  function repassword(){
-   var pass = document.getElementsByClassName('form-input')
- if(pass[2].type === "text"){
-      pass[2].type === "password"
-      document.getElementById('eye-2').style.display = 'none';
-      document.getElementById('eye-1').style.display = 'inline';
- }
+ 
      
-   }
+   
  
 
