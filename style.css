@@ -98,10 +98,9 @@
    }
    .eye {
     position: relative;
-    display: block;
     bottom: 23px;
     right: 10px;
-    text-align: right;
+    float: right;
 }
 .eye-e {
     position: relative;
