@@ -25,87 +25,11 @@
                             <p class="text-center start-form fs-4 p-0 m-0 fw-semibold">Authentication required</p>
                             <p class="text-center start-form fs-5 pt-1 pb-4 fw-semibold">Please log in to access this page</p>
                             <div class="start-form ">
-                                <button onclick="showform()" class="btn-1">Log-IN</button>
+                                <button onclick="login()" class="btn-1">Log-IN</button>
                                 <button onclick="signup()" class="btn-1">Sign-UP</button>
                             </div>
                         </div>
                     </div>
-                        
-                    <div class="head-1">
-                        <p class="text-center login-form ">Login Form</p>
-                        <p class="text-center signup-form">Sign-UP Form</p>
-
-                    </div>
-                   
-                    <form class="login-form form-pad" id="login-form">
-                        <div class="row  d-flex ">
-                            <div class="col-lg-10 col-md-10 offset-lg-2 offset-md-2">
-                            <label for="name">Name</label><br>
-                            <input type="text" class="sign form-input" placeholder="enter your name"><br><br>
-                            </div>
-                            <div class="col-lg-10 col-md-10 offset-lg-2 offset-md-2">
-                            <label for="name">Username</label><br>
-                            <input type="text" class="sign form-input"  placeholder="enter your  username"><br><br>
-                            </div>
-                            <div class="col-lg-10 col-md-10 offset-lg-2 offset-md-2 ">
-                            <label for="name">Password</label><br>
-                            <input type="password" class="sign form-input" id="password" placeholder="enter your password">
-                            <span><i class="fa-solid fa-eye-slash eye " onmouseup="password()" id="eye-2"></i></span>
-                            <span><i class="fa-solid fa-eye eye " id="eye-1" onmousedown="password()" ></i></span><br><br>
-
-                            </div>
-                            
-                        </div>
-                            <div class="col-lg-10 col-md-10 offset-md-2 offset-lg-2 d-flex ">
-                                <input type="submit" value="Log-IN" class="submit"  id="submit">
-                            </div>
-                        
-                    </form>
-                    <form class="signup-form form-pad" onsubmit="login(); return false">
-                        <div class="row  d-flex ">
-                            <div class="col-lg-6 col-md-5 offset-md-1 offset-lg-0">
-                            <label for="name">Name</label><br>
-                            <input type="text" class="sign form-input" placeholder="enter your name"><br><br>
-                            </div>
-                            <div class="col-lg-6 col-md-5">
-                            <label for="name">Last Name</label><br>
-                            <input type="text" class="sign form-input" placeholder="enter your  last name"><br><br>
-                            </div>
-                            <div class="col-lg-6 col-md-5 offset-md-1 offset-lg-0">
-                            <label for="name">Email id</label><br>
-                            <input type="email" class="sign form-input"  placeholder="enter your email id"><br><br>
-                            </div>
-                            <div class="col-lg-6 col-md-5">
-                            <label for="name">Phone</label><br>
-                            <input type="tel" class="sign form-input"  placeholder="enter your phone number"><br><br>
-                            </div>
-                            <div class="col-lg-6 col-md-5 offset-md-1 offset-lg-0">
-                            <label for="name">College</label><br>
-                            <input type="text" class="sign form-input"  placeholder="enter your college name"><br><br>
-                            </div>
-                            <div class="col-lg-6 col-md-5">
-                            <label for="name">username</label><br>
-                            <input type="text" class="sign form-input"  placeholder="create your username"><br><br>
-                            </div>
-                            <div class="col-lg-6 col-md-5 offset-md-1 offset-lg-0">
-                            <label for="name">Password</label><br>
-                            <input type="password" class="sign form-input"  placeholder="create your password">
-                            <span><i class="fa-solid fa-eye-slash  eye-f" onmouseup="password()" id="eye-2"></i></span>
-                            <span><i class="fa-solid fa-eye  eye-f " id="eye-1" onmousedown="password()" ></i></span>
-                            </div>
-                            <div class="col-lg-6 col-md-5">
-                            <label for="name">Confirm Password</label><br>
-                            <input type="password" class="sign form-input"  placeholder="re-enter your password ">
-                            <span><i class="fa-solid fa-eye-slash  eye-e" onmouseup="password()" id="eye-2"></i></span>
-                            <span><i class="fa-solid fa-eye  eye-e" id="eye-1" onmousedown="password()" ></i></span><br><br>
-                            </div>
-                           
-                        </div>
-                            <div class="col-lg-10 col-md-10 offset-md-2">
-                                <input type="submit" value="Sign UP"  class="submit" id="submit">
-                            </div>
-                        
-                    </form>
                 </div>
             </div>
         </div>
