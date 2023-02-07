@@ -35,7 +35,7 @@ function password(){
       y[4].type = "password";
       document.getElementById("eye-2").style.display = "none";
       document.getElementById("eye-1").style.display = "inline";
-      console.log(y[4])
+     
     }
     }
    
