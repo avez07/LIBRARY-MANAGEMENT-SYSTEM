@@ -1,9 +1,9 @@
 function login(){
-  window.location.assign("/login.html");
+  window.location.replace("/login.html");
 return false
 }
 function signup(){
-  window.location.assign("/signup.html");
+  window.location.replace("/signup.html");
   return false
 }
 function password(){
