@@ -28,7 +28,7 @@
     border-radius: 4px;
     font-size: 20px;
     padding: 10px 0;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     
 }
 .width{
@@ -81,7 +81,7 @@
 .eye-f {
     position: absolute;
     display: inline-block;
-    bottom: -11px;
+    bottom: 25px;
     right: 354px ;
     text-align: right;
 }
@@ -89,7 +89,7 @@
     border: #c8b59a solid 4px;
     border-radius: 8px;
     box-shadow: -2px 2px 17px rgb(143, 143, 143);
-    padding: 20px;
+    padding: 10px 20px;
     margin-top: 20px;
 }
 .image-logo{
@@ -115,7 +115,7 @@
 .eye-f {
     position: relative;
    
-    bottom: 49px;
+    bottom: 23px;
     right: 15px;
     float: right;
 }
@@ -129,7 +129,7 @@
 }
 .eye-f {
     position: relative;
-    bottom: 49px;
+    bottom: 25px;
     right: 10px;
     float: right !important;
 }
