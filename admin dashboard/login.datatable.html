@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Book-Inventory</title>
+    <title>book-issued</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -53,9 +53,6 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <div class="sidebar-heading">
-                Intventory
-            </div>
            
             <li class="nav-item active">
                 <a class="nav-link" href="book-issue.html">
@@ -73,7 +70,7 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Streams
+                Interface
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
@@ -116,48 +113,48 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Subjects:</h6>
-                        <a class="collapse-item" href="cards.html">subject 1</a>
-                        <a class="collapse-item" href="cards.html">subject 2</a>
+                        <a class="collapse-item" href="sem1.subject1.html">subject 1</a>
+                        <a class="collapse-item" href="sem1.subject2.html">subject 2</a>
 
                     </div>
                 </div>
                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Subjects:</h6>
-                        <a class="collapse-item" href="cards.html">subject 1</a>
-                        <a class="collapse-item" href="cards.html">subject 2</a>
+                        <a class="collapse-item" href="sem2.subject1.html">subject 1</a>
+                        <a class="collapse-item" href="sem2.subject2.html">subject 2</a>
 
                     </div>
                 </div>
                 <div id="collapseFour" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Subjects:</h6>
-                        <a class="collapse-item" href="cards.html">subject 1</a>
-                        <a class="collapse-item" href="cards.html">subject 2</a>
+                        <a class="collapse-item" href="sem3.subject1.html">subject 1</a>
+                        <a class="collapse-item" href="sem3.subject2.html">subject 2</a>
 
                     </div>
                 </div>
                 <div id="collapseFive" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Subjects:</h6>
-                        <a class="collapse-item" href="cards.html">subject 1</a>
-                        <a class="collapse-item" href="cards.html">subject 2</a>
+                        <a class="collapse-item" href="sem4.subject1.html">subject 1</a>
+                        <a class="collapse-item" href="sem4.subject2.html">subject 2</a>
 
                     </div>
                 </div>
                 <div id="collapseSix" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Subjects:</h6>
-                        <a class="collapse-item" href="cards.html">subject 1</a>
-                        <a class="collapse-item" href="cards.html">subject 2</a>
+                        <a class="collapse-item" href="sem5.subject1.html">subject 1</a>
+                        <a class="collapse-item" href="sem5.subject2.html">subject 2</a>
 
                     </div>
                 </div>
                 <div id="collapseSeven" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Subjects:</h6>
-                        <a class="collapse-item" href="cards.html">subject 1</a>
-                        <a class="collapse-item" href="cards.html">subject 2</a>
+                        <a class="collapse-item" href="sem6.subject1.html">subject 1</a>
+                        <a class="collapse-item" href="sem6.subject2.html">subject 2</a>
 
                     </div>
                 </div>
@@ -180,6 +177,7 @@
                     <span>Logout</span></a>
             </li>
         </ul>
+        
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -284,10 +282,10 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800 fw-bold">Book Inventry </h1>
+                        <h1 class="h3 mb-0 text-gray-800 fw-bold">Book issued details </h1>
                          
                            <button class="d-none d-sm-inline-block btn btn-sm btn-color shadow-sm fs-6" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-regular fa-square-plus pe-2 btn-color">
-                           </i>  Add Book</button></a>
+                           </i>  Add student</button></a>
                            <!-- Button trigger modal -->
 
                     </div>
@@ -306,33 +304,37 @@
                                         <div class="row">
                                         
                                           <div class="col-lg-6 py-2">
-                                          <label for="details" class="label-i">Book name</label>
+                                          <label for="details" class="label-m">Student Name</label>
                                           <input type="text" class="modal-input" placeholder="Enter the student name">
                                           </div>
                                           <div class="col-lg-6 py-2">
-                                          <label for="details" class="label-i">Book id</label>
+                                          <label for="details" class="label-m">Student id</label>
                                           <input type="text" class="modal-input" placeholder="Enter the student id">
                                           </div>
                                           <div class="col-lg-6 py-2">
-                                          <label for="details" class="label-i">Author Name</label>
+                                          <label for="details" class="label-m">Phone</label>
                                           <input type="number" class="modal-input" placeholder="Enter student phone number">
                                           </div>
                                           <div class="col-lg-6 py-2">
-                                            <label for="details" class="label-i">Stream</label>
-                                            <input type="text" class="modal-input" placeholder="Enter the student address">
-                                            </div>
-                                            <div class="col-lg-6 py-2">
-                                                <label for="details" class="label-i">Subject</label>
-                                                <input type="text" class="modal-input" placeholder="Enter the student address">
-                                                </div>
-                                          <div class="col-lg-6 py-2">
-                                          <label for="details" class="label-i">Published year</label>
+                                          <label for="details" class="label-m">Address</label>
                                           <input type="text" class="modal-input" placeholder="Enter the student address">
                                           </div>
-                                          <div class="col-lg-12 py-2">
-                                            <label for="details" class="label-i">PDF</label>
-                                            <input type="file" class="modal-input" placeholder="Enter the student address">
-                                            </div>
+                                          <div class="col-lg-6 py-2">
+                                          <label for="details" class="label-m">Book</label>
+                                          <input type="text" class="modal-input" placeholder="Enter the book name">
+                                          </div>
+                                          <div class="col-lg-6 py-2">
+                                          <label for="details" class="label-m">Book id</label>
+                                          <input type="text" class="modal-input" placeholder="Enter the book id">
+                                          </div>
+                                          <div class="col-lg-6 py-2">
+                                           <label for="details" class="label-m">Issued date</label>
+                                          <input type="date" class="modal-input">
+                                          </div>
+                                          <div class="col-lg-6 py-2">
+                                           <label for="details" class="label-m">Return date</label>
+                                          <input type="date" class="modal-input">
+                                          </div>
                                           <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                             <input type="submit" value="Add" class="btn-color sub" >
@@ -368,14 +370,11 @@
                         <table class="datatables" id="datatables">
                             <thead>
                                 <th class="t-head" style="width:3% ;">ID</th>
-                                <th class="t-head" style="width:18% ;">Book Name</th>
-                                <th class="t-head" style="width:15% ;">Book ID</th>
-                                <th class="t-head" style="width: 19%;">Author Name</th>
-                                <th class="t-head" style="width: 12%;">Strem</th>
-                                <th class="t-head" style="width: 16%;">Subject</th>
-                                <th class="t-head" style="width: 12%;">Published year</th>
-                                <th class="t-head" style="width: 5%;">PDF</th>
-
+                                <th class="t-head" style="width:22% ;">Name</th>
+                                <th class="t-head" style="width:21% ;">Email ID</th>
+                                <th class="t-head" style="width: 17%;">Username</th>
+                                <th class="t-head" style="width: 15%;">Password</th>
+                                <th class="t-head" style="width: 15%;">Confirm password</th>
                                
                             </thead>
                         </table>
