@@ -111,4 +111,11 @@ function password(){
      }
 
     }
+
+   
+  $(document).ready( function () {
+    $('#dataTable').DataTable({
+      footer : false
+    });
+} );
    
