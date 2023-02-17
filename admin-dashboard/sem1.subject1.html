@@ -25,7 +25,6 @@
     <link rel="stylesheet" href="css/sb-admin-2.css">
     <link rel="stylesheet" href="css/style.css">
     <!-- <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet"> -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.2/css/jquery.dataTables.css">
 
 
     <!-- animation links -->
@@ -302,23 +301,26 @@
                                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                        <form action="" class="modal-form">
+                                        <form action="" class="modal-form" onsubmit=" return Video() && Pdf()">
                                         <div class="row">
                                             <div class="col-lg-6 py-2">
                                                 <label for="details" class="label-i"> video title</label>
-                                                <input type="text" class="modal-input" placeholder="Enter video title">
+                                                <input type="text" class="modal-input" id="video-1" placeholder="Enter video title">
                                              </div>
                                              <div class="col-lg-6 py-2">
                                                 <label for="details" class="label-i"> Notes title</label>
-                                                <input type="text" class="modal-input"  placeholder="Enter Notes title">
+                                                <input type="text" class="modal-input" id="pdf-h" placeholder="Enter Notes title">
                                              </div>
                                           <div class="col-lg-6 py-2">
                                           <label for="details" class="label-i">Add video</label>
-                                          <input type="file" class="modal-input " id="video" >
+                                          <input type="file" class="modal-input " id="video" accept="video/*" >
+                                          <span id="vid" class="text-danger fw-semibold"></span>
                                           </div>
                                           <div class="col-lg-6 py-2">
                                           <label for="details" class="label-i">Add Notes</label>
-                                          <input type="file" class="modal-input" multiple>
+                                          <input type="file" class="modal-input" id="pdf" multiple>
+                                          <span id="pd" class="text-danger fw-semibold"></span>
+
                                           </div>
                                           <div class="col-lg-12 py-2">
                                           <label for="details" class="label-i">Discription</label>
@@ -361,7 +363,7 @@
                             <div class="col-lg-3">
                                 <div class="card notes" style="width: 18rem;">
                                     <video width="400" height="200" controls class="card-img-top">
-                                        <source src="/images/AKI Certifate.mp4"type="video/mp4"></video>
+                                        <source src="/images/imagesAKI Certifate.mp4"type="video/mp4"></video>
                                     <div class="card-body">
                                       <h5 class="card-title">sic practical </h5>
                                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -389,7 +391,7 @@
     <!-- End of Page Wrapper -->
 
     <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
+    <a class="scroll-to-top rounded" href="#page-top" >
         <i class="fas fa-angle-up"></i>
     </a>
 

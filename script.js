@@ -111,11 +111,89 @@ function password(){
      }
 
     }
+    function admin(){
+      var user = document.getElementById('user').value;
+      var pass = document.getElementById('password-1').value;
+      if(user === 'admin' && pass === 'password'){
+        console.log('Login successful');
+        location.replace("/admin-dashboard/book-issue.html")
+       
+    }
+    else{
+        console.log('Login failed. Incorrect Username or Password');
+       
+    }
+    }
+    
+    function Video(){
+      var fileName = document.getElementById("video").value;
+      var allowedExtensions = ['mp4', 'avi', 'mov', 'wmv', 'flv'];
+      for(var i = 0; i < allowedExtensions.length; i++){
+      if(fileName.indexOf(allowedExtensions[i]) > -1) {
+        return true;
+      }
+    
+      else {
+        document.getElementById('vid').innerHTML = "Please add video only"
+        return false;
+      }
+    }
+    
+    }
+    function Pdf(){
+      var fileName = document.getElementById("pdf").value;
+      var allowedExtensions = ['pdf', 'html','docx','pptx'];
+      for(var i = 0; i < allowedExtensions.length; i++){
+      if(fileName.indexOf(allowedExtensions[i]) > -1) {
+        return true;
+      }
+    
+      else {
+        document.getElementById('pd').innerHTML = "Please add notes only"
+        return false;
+      }
+    }
+    }
+    function addrow(){
+      var table = document.getElementById('datatables');
+      var name = document.getElementById('name').value;
+      var nid = document.getElementById('id').value;
+      var num = document.getElementById('num').value;
+      var adrr = document.getElementById('adrr').value;
+      var book = document.getElementById('i-book').value;
+      var bookid = document.getElementById('i-book-id').value;
+      var issue = document.getElementById('issued').value;
+      var retuen = document.getElementById('return').value;
+      count = 0
+
+      var row = table.insertRow(1);
+
+      var cell1 = row.insertCell(0);
+      var cell2 = row.insertCell(1);
+      var cell3 = row.insertCell(2);
+      var cell4 = row.insertCell(3);
+      var cell5 = row.insertCell(4);
+      var cell6 = row.insertCell(5);
+      var cell7 = row.insertCell(6);
+      var cell8 = row.insertCell(7);
+      var cell9 = row.insertCell(8);
+      count++;
+      
+      cell1.innerHTML = count
+      cell2.innerHTML = name;
+      cell3.innerHTML = nid;
+      cell4.innerHTML = num;
+      cell5.innerHTML = adrr;
+      cell6.innerHTML = book;
+      cell7.innerHTML = bookid;
+      cell8.innerHTML = issue;
+      cell9.innerHTML = retuen;
+      
+
+      
+    }
+    
 
    
-  $(document).ready( function () {
-    $('#dataTable').DataTable({
-      footer : false
-    });
-} );
+ 
    
