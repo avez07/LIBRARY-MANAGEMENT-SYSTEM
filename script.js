@@ -116,7 +116,11 @@ function password(){
       var pass = document.getElementById('password-1').value;
       if(user === 'admin' && pass === 'password'){
         console.log('Login successful');
-        location.replace("/admin-dashboard/book-issue.html")
+        location.href=("/admin-dashboard/book-issue.html")
+        window.onload = function() {
+          window.history.forward();
+        };
+        
        
     }
     else{
@@ -188,10 +192,10 @@ function password(){
       cell7.innerHTML = bookid;
       cell8.innerHTML = issue;
       cell9.innerHTML = retuen;
-      
-
-      
     }
+    window.onload = function() {
+      window.history.forward();
+    };
     
 
    
