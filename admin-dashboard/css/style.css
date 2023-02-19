@@ -1,4 +1,5 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Neuton:wght@200&display=swap');
 .form{
     background-color: #c8b59a;
    
@@ -63,14 +64,10 @@
     margin: 0 10px;
 }
 
-    .eye {
-        position: relative;
-        bottom: 25px;
-        right: 14px;
-        float: right;
-    }
+   
 #eye-2{
     display: none;
+    color: #000;
 }
 .eye-e {
     position: absolute;
@@ -78,6 +75,7 @@
     bottom: -11px;
     right: 67px ;
     text-align: right;
+    color: #000;
 }
 .eye-f {
     position: absolute;
@@ -85,6 +83,7 @@
     bottom: 25px;
     right: 354px ;
     text-align: right;
+    color: #000;
 }
 .borders {
     border: #c8b59a solid 4px;
@@ -98,11 +97,13 @@
     bottom: 47px;
     right: 10px;
     float: right !important;
+    color: #000;
 }
 
 
 #eye-3{
   display: none;
+  color: #000;
 }
 /* dasboard css started */
 .bg-color{
@@ -190,6 +191,14 @@
     padding: 20px;
     background-color: #faf6f6;
     color: black;
+  }
+  .bld , span{
+    color: #fff !important;
+    font-weight: 700;
+    font-family: 'Neuton', serif;
+    letter-spacing: 2px;
+    font-size: 15px !important;
+    text-transform: capitalize;
   }
 @media only screen and (max-width: 767px){
    .form-f{

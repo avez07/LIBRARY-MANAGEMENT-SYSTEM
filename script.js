@@ -112,15 +112,16 @@ function password(){
 
     }
     function admin(){
-      var user = document.getElementById('user').value;
-      var pass = document.getElementById('password-1').value;
+      const user = document.getElementById('user').value;
+      const pass = document.getElementById('password-1').value;
+     
+
       if(user === 'admin' && pass === 'password'){
         console.log('Login successful');
         location.href=("/admin-dashboard/book-issue.html")
-        window.onload = function() {
-          window.history.forward();
-        };
-        
+        // document.getElementById('l-name').innerHTML= "Welcome";
+       
+        return false
        
     }
     else{
@@ -196,6 +197,7 @@ function password(){
     window.onload = function() {
       window.history.forward();
     };
+
     
 
    
