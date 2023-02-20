@@ -147,11 +147,11 @@ function password(){
     }
     function Pdf(){
       var fileName = document.getElementById("pdf").value;
-      var allowedExtensions = ['pdf', 'html','docx','pptx'];
-      for(var i = 0; i < allowedExtensions.length; i++){
+      var allowedExtensions2 = ['pdf', 'html','docx','pptx'];
+      for(var i = 0; i < allowedExtensions2.length; i++){
       if(fileName.indexOf(allowedExtensions[i]) > -1) {
         console.log("login")
-        return false;
+        return true;
         
       }
     
@@ -198,9 +198,12 @@ function password(){
       cell8.innerHTML = issue;
       cell9.innerHTML = retuen;
     }
-    window.onload = function() {
-      window.history.forward();
-    };
+    // window.onload = function() {
+    //   window.history.forward();
+    // };
+   
+   
+    
 
     
 

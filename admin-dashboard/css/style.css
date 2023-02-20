@@ -150,6 +150,7 @@
     border-radius: 4px;
     border: 2px solid #0f1b4f;
     outline: none;
+    height: 38px;
   }
   .sub{
     padding: 5px 15px;
@@ -191,7 +192,7 @@
   }
   textarea{
     resize: none;
-    height: 130px;
+    height: 130px !important;
   }
   .notes{
     margin-top: 70px;
@@ -208,25 +209,43 @@
     text-transform: capitalize;
   }
  
-  #video{
+  .custom {
     background-color: #0f1b4f;
     color: #fff;
   }
-  #video::-webkit-file-upload-button {
+  .custom::-webkit-file-upload-button {
     visibility: hidden;
+   
+   
   }
-  #video::before {
-    content: 'Upload the file';
+  
+  .custom::before {
+    content: 'Upload Video';
     display: inline-block;
-    padding: 5px 8px;
+    padding: 5px 13px 5px 49px;
     outline: none;
     white-space: nowrap;
-    -webkit-user-select: none;
     cursor: pointer;
-   
     font-weight: 700;
     font-size: 12pt;
   }
+  #wrapper #content-wrapper {
+    background-color: #f8f9fc;
+    width: 100%;
+    overflow: hidden;
+}
+.icons{
+  color: #ffffff;
+    position: relative;
+    bottom: 31px;
+    left: 10px;
+    font-size: 23px;
+    cursor: pointer;
+}
+#pdf::before{
+  content: "Upload PDF";
+  padding: 5px 13px 5px 35px;
+}
 @media only screen and (max-width: 767px){
    .form-f{
     height: 108vmin;

@@ -301,7 +301,7 @@
                                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                        <form action="" class="modal-form">
+                                        <form action="" class="modal-form " onsubmit="Pdf(); return false">
                                         <div class="row">
                                         
                                           <div class="col-lg-6 py-2">
@@ -329,12 +329,14 @@
                                           <input type="text" class="modal-input" placeholder="Enter the student address">
                                           </div>
                                           <div class="col-lg-6 py-2">
-                                            <label for="details" class="label-i">stock</label>
+                                            <label for="details" class="label-i">Stock</label>
                                             <input type="number" class="modal-input" placeholder="Enter the quantity of the book">
                                             </div>
                                           <div class="col-lg-6 py-2">
                                             <label for="details" class="label-i">PDF</label>
-                                            <input type="file" class="modal-input" placeholder="Enter the student address">
+                                            <input type="file" class="modal-input custom"id="pdf" placeholder="Enter the student address">
+                                          <span><i class="fa-solid fa-file-pdf icons"></i></span>
+                                          <span class="text-danger fw-semibold " id="pd"></span>
                                             </div>
                                            
                                           <div class="modal-footer">
