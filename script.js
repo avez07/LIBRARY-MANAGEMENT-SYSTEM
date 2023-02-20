@@ -128,9 +128,9 @@ function password(){
         console.log('Login failed. Incorrect Username or Password');
        
     }
-    }
-    
-    function Video(){
+      }
+      
+      function Video(){
       var fileName = document.getElementById("video").value;
       var allowedExtensions = ['mp4', 'avi', 'mov', 'wmv', 'flv'];
       for(var i = 0; i < allowedExtensions.length; i++){
@@ -139,7 +139,7 @@ function password(){
       }
     
       else {
-        document.getElementById('vid').innerHTML = "Please add video only"
+        document.getElementById('vid').innerHTML = "Please add video only"      
         return false;
       }
     }
@@ -150,15 +150,19 @@ function password(){
       var allowedExtensions = ['pdf', 'html','docx','pptx'];
       for(var i = 0; i < allowedExtensions.length; i++){
       if(fileName.indexOf(allowedExtensions[i]) > -1) {
-        return true;
+        console.log("login")
+        return false;
+        
       }
     
       else {
         document.getElementById('pd').innerHTML = "Please add notes only"
+        alert("pleas type note")
         return false;
       }
     }
     }
+
     function addrow(){
       var table = document.getElementById('datatables');
       var name = document.getElementById('name').value;

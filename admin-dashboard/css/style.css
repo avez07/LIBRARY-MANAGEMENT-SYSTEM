@@ -168,9 +168,16 @@
     border-radius: 3px;
     color: black;
     word-wrap: break-word;
+
+  }
+  th{
+    background-color: #0f1b4f;
+    color: #fff;
+    border-color: #000;
+    text-align: center;
   }
   table{
-    width: 97%;
+    width: 98%;
     border-collapse: collapse;
     margin: 20px auto;
   }
@@ -199,6 +206,26 @@
     letter-spacing: 2px;
     font-size: 15px !important;
     text-transform: capitalize;
+  }
+ 
+  #video{
+    background-color: #0f1b4f;
+    color: #fff;
+  }
+  #video::-webkit-file-upload-button {
+    visibility: hidden;
+  }
+  #video::before {
+    content: 'Upload the file';
+    display: inline-block;
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+   
+    font-weight: 700;
+    font-size: 12pt;
   }
 @media only screen and (max-width: 767px){
    .form-f{

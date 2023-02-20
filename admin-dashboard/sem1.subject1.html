@@ -301,7 +301,7 @@
                                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                        <form action="" class="modal-form">
+                                        <form action="" class="modal-form" onsubmit="Video() && Pdf(); return false">
                                         <div class="row">
                                             <div class="col-lg-6 py-2">
                                                 <label for="details" class="label-i"> video title</label>
@@ -311,13 +311,15 @@
                                                 <label for="details" class="label-i"> Notes title</label>
                                                 <input type="text" class="modal-input"  placeholder="Enter Notes title">
                                              </div>
-                                          <div class="col-lg-6 py-2">
+                                          <div class="col-lg-6 col-md-6 py-2">
                                           <label for="details" class="label-i">Add video</label>
                                           <input type="file" class="modal-input " id="video" >
+                                          <span class="text-danger fw-semibold " id="vid"></span>
                                           </div>
-                                          <div class="col-lg-6 py-2">
+                                          <div class="col-lg-6 col-md-6 py-2">
                                           <label for="details" class="label-i">Add Notes</label>
-                                          <input type="file" class="modal-input" multiple>
+                                          <input type="file" class="modal-input" id="pdf" multiple>
+                                          <span class="text-danger fw-semibold " id="pd"></span>
                                           </div>
                                           <div class="col-lg-12 py-2">
                                           <label for="details" class="label-i">Discription</label>
