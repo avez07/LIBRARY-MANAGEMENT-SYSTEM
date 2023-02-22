@@ -1,5 +1,5 @@
 
-function password(){
+function password(){                                //ipassword show hide function for login page 
   var x = document.getElementsByClassName("log");
   if (x[1].type === "password") {
     x[1].type = "text";
@@ -13,7 +13,7 @@ function password(){
     document.getElementById("eye-2").style.display = "none";
   }
   }
-  function password2(){
+  function password2(){                                                 //ipassword show hide function for login page 
     var y = document.getElementsByClassName("sign");
     if (y[3].type === "password" || y[4].type === "password") {
       y[3].type = "text";
@@ -34,7 +34,7 @@ function password(){
      
     }
     }
-    function validate(){
+    function validate(){                                          //validation for signup form
       var name = document.getElementById("name").value;
       var email = document.getElementById("email").value;
       var user = document.getElementById("username").value;
@@ -111,7 +111,7 @@ function password(){
      }
 
     }
-    function admin(){
+    function admin(){                                                     //admin login function
       const user = document.getElementById('user').value;
       const pass = document.getElementById('password-1').value;
      
@@ -131,8 +131,14 @@ function password(){
       }
       
       function Video(){
+        var tittle = document.getElementById('vid-t1').value;
       var fileName = document.getElementById("video").value;
       var allowedExtensions = ['mp4', 'avi', 'mov', 'wmv', 'flv'];
+      if(tittle == null || tittle == ""){
+        document.getElementById('vid-t').innerHTML = "Please fill the information";
+        return false;
+      }else{}
+
       for(var i = 0; i < allowedExtensions.length; i++){
       if(fileName.indexOf(allowedExtensions[i]) > -1) {
         return true;
@@ -143,24 +149,24 @@ function password(){
         return false;
       }
     }
+   
     
     }
     function Pdf(){
       var fileName = document.getElementById("pdf").value;
-      var allowedExtensions2 = ['pdf', 'html','docx','pptx'];
-      for(var i = 0; i < allowedExtensions2.length; i++){
+      var allowedExtensions = ['pdf', 'html','docx','pptx'];
+
+      for(var i = 0; i < allowedExtensions.length; i++){
       if(fileName.indexOf(allowedExtensions[i]) > -1) {
-        console.log("login")
         return true;
-        
       }
     
       else {
-        document.getElementById('pd').innerHTML = "Please add notes only"
-        alert("pleas type note")
+        document.getElementById('pd').innerHTML = "Please add note only"      
         return false;
       }
     }
+    
     }
 
     function addrow(){
@@ -202,7 +208,94 @@ function password(){
     //   window.history.forward();
     // };
    
+   function validate2(){                                                        //validation for book issued.html add student form
+    var name = document.getElementById('s-name1').value;
+    var id = document.getElementById('s-id1').value;
+    var num = document.getElementById('s-num1').value;
+    var addr = document.getElementById('s-add1').value;
+    var bname = document.getElementById('b-name1').value;
+    var bid = document.getElementById('b-id1').value;
+    var issu = document.getElementById('issu1').value;
+    var retu = document.getElementById('retu').value;
+    // where the message shown id
+    var name1 = document.getElementById('s-name');
+    var id1 = document.getElementById('s-id')
+    var num1 = document.getElementById('s-num');
+    var addr1 = document.getElementById('s-add');
+    var bname1 = document.getElementById('b-name');
+    var bid1 = document.getElementById('b-id');
+    var issu1 = document.getElementById('issu');
+    var retu1 = document.getElementById('ret');
+
+    if(name == null || name == ""){
+      name1.innerHTML = "Please fill the information"
+      return false;
+    }
+    else if(!isNaN(name)){
+      name1.innerHTML = "Only character is allowed"
+      return false;
+    }
+    else if(id == null || id == ""){
+      id1.innerHTML = "Please fill the information"
+      return false;
+    }
+    else if(/[ \W+]/.test(id)){
+     id1.innerHTML = "special characters are not allowed"
+      return false
+    }
+    else if(id.length >= 10){
+      id1.innerHTML = "id should be smaller than 10 number"
+      return false
+    }
+     else if(num == null || num == ""){
+      num1.innerHTML = "Please fill the information"
+      return false;
+      }
+   else if(isNaN(num)){
+    num1.innerHTML = "Please enter valid phone number";
+    return false ;
+   }
+   else if(num.length != 10){
+    num1.innerHTML = "Number length should be 10 ";
+    return false ;
+   }
+   else if(addr == null || addr == ""){
+    addr1.innerHTML = "Please fill the information"
+    return false;
+    }
+    else  if(bname == null || bname == ""){
+     bname1.innerHTML = "Please fill the information"
+    return false;
+    }
+    else if(!isNaN(bname)){
+     bname1.innerHTML = "Only character is allowed"
+      return false;
+    }
+    else if(/[ \W+]/.test(bid)){
+      bid1.innerHTML = "special characters are not allowed"
+       return false
+     }
+     else if(bid.length >= 10){
+       bid1.innerHTML = "id should be smaller than 10 number"
+       return false
+     }
+     else  if(issu == null || issu == ""){
+      issu1.innerHTML = "Please fill the information"
+     return false;
+     }
+     else  if(retu == null || retu == ""){
+      retu1.innerHTML = "Please fill the information"
+     return false;
+     }else{
+      return true
+     }
+  }
+  function validation3(){
+    var tittle = document.getElementById('vid-t1').value;
+    var fileName = document.getElementById("video").value;
    
+   
+  }
     
 
     
