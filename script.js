@@ -42,7 +42,7 @@ function password(){                                //ipassword show hide functi
       var pass2 = document.getElementById("password2").value;
   
 
-      if(name == null || name == ""){
+      if(name == null || name == ""){ 
           document.getElementById("names").innerHTML = "Please fill the text" ;
           return false;
       }
@@ -111,64 +111,86 @@ function password(){                                //ipassword show hide functi
      }
 
     }
-    function admin(){                                                     //admin login function
+    function admin() {
       const user = document.getElementById('user').value;
       const pass = document.getElementById('password-1').value;
-     
-
-      if(user === 'admin' && pass === 'password'){
+      const ad = document.getElementsByClassName('admin');
+    
+      if (user === 'admin' && pass === 'password') {
         console.log('Login successful');
-        location.href=("/admin-dashboard/book-issue.html")
-        // document.getElementById('l-name').innerHTML= "Welcome";
-       
-        return false
-       
+        location.href = '/admin-dashboard/book-issue.html';
+        return false;
+      } else if (user === 'user' && pass === 'password') {
+        for (let i = 0; i < ad.length; i++) {
+          ad[i].style.display = 'none';
+        }
+        console.log(ad);
+        location.href = '/admin-dashboard/book-issue.html';
+        return false;
+      } else {
+        alert('Invalid username or password');
+        return false;
+      }
     }
-    else{
-        console.log('Login failed. Incorrect Username or Password');
-       
-    }
+    
+      
+      function Video() {                                                                 // Adding video validation
+        var fileName = document.getElementById("vid-t1").value;
+        var vid = document.getElementById("video");
+        var vid1 = document.getElementById("vid1");
+
+        if(fileName == null || fileName == ""){ 
+          document.getElementById("vid-t").innerHTML = "Field cannot be blank." ;
+          return false;
+        }
+         else if (vid.files.length == 0 && vid1.innerHTML == "") {
+          vid1.innerHTML = "This field is required.";
+          return false;
+        } else if (vid.files.length > 0 && !vid.files[0].name.match(/\.(mp4|avi|mov|wmv)$/i)) {
+          vid1.innerHTML = "Please select a video file";
+          return false;
+        } else {
+          vid1.innerHTML = "";
+          document.getElementById("vid-t").innerHTML = "" ;
+          return true;
+        }
       }
       
-      function Video(){
-        var tittle = document.getElementById('vid-t1').value;
-      var fileName = document.getElementById("video").value;
-      var allowedExtensions = ['mp4', 'avi', 'mov', 'wmv', 'flv'];
-      if(tittle == null || tittle == ""){
-        document.getElementById('vid-t').innerHTML = "Please fill the information";
-        return false;
-      }else{}
+        function Pdf() {                                                            //Adding pdf validation
+          var fileName = document.getElementById("not-t1").value;
+          var pdf = document.getElementById("pdf");
+          var pd = document.getElementById("pd");
+          var thum = document.getElementById("thumb");
+          var tum = document.getElementById("tum");
 
-      for(var i = 0; i < allowedExtensions.length; i++){
-      if(fileName.indexOf(allowedExtensions[i]) > -1) {
-        return true;
-      }
-    
-      else {
-        document.getElementById('vid').innerHTML = "Please add video only"      
-        return false;
-      }
-    }
-   
-    
-    }
-    function Pdf(){
-      var fileName = document.getElementById("pdf").value;
-      var allowedExtensions = ['pdf', 'html','docx','pptx'];
-
-      for(var i = 0; i < allowedExtensions.length; i++){
-      if(fileName.indexOf(allowedExtensions[i]) > -1) {
-        return true;
-      }
-    
-      else {
-        document.getElementById('pd').innerHTML = "Please add note only"      
-        return false;
-      }
-    }
-    
-    }
-
+          if(fileName == null || fileName == ""){ 
+            document.getElementById("not-t").innerHTML = "Field cannot be blank." ;
+            return false;
+          }
+          else if (pdf.files.length == 0 && pd.innerHTML == "") {
+            pd.innerHTML = "This field is required.";
+            return false;
+          } else if (pdf.files.length > 0 && !pdf.files[0].name.match(/\.(pdf)$/i)) {
+            pd.innerHTML = "Please select a PDF file";
+            return false;
+          } 
+          else if (thum.files.length == 0 && tum.innerHTML == "") {
+            tum.innerHTML = "This field is required.";
+            return false;
+          } else if (thum.files.length > 0 && !thum.files[0].name.match(/\.(jpg|png)$/i)) {
+            tum.innerHTML = "Please select a IMG file";
+            return false;
+          }
+          else {
+            pd.innerHTML = "";
+            tum.innerHTML = "";
+            
+            document.getElementById("not-t").innerHTML = "" ;
+            alert("ansari")
+            return true;
+          }
+        }
+       
     function addrow(){
       var table = document.getElementById('datatables');
       var name = document.getElementById('name').value;
@@ -290,16 +312,4 @@ function password(){                                //ipassword show hide functi
       return true
      }
   }
-  function validation3(){
-    var tittle = document.getElementById('vid-t1').value;
-    var fileName = document.getElementById("video").value;
-   
-   
-  }
-    
-
-    
-
-   
  
-   

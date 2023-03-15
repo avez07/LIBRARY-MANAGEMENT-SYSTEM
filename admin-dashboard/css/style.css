@@ -246,6 +246,35 @@
   content: "Upload PDF";
   padding: 5px 13px 5px 35px;
 }
+#thumb::before{
+  content: "Upload Thumb Nail";
+  padding: 5px 13px 5px 35px;
+}
+.tv-img{
+  position: absolute;
+  height: 37%;
+  width: 582px;
+  bottom: 107px;
+}
+
+@media only screen and (max-width: 400px){
+  .tv-img {
+    position: absolute;
+    height: 16%;
+    width: 290px;
+ 
+}
+
+}
+@media only screen and (min-width: 400px) and (max-width:600px){
+  .tv-img {
+    position: absolute;
+    height: 18%;
+    width: 322px;
+
+}
+}
+
 @media only screen and (max-width: 767px){
    .form-f{
     height: 108vmin;
@@ -271,7 +300,7 @@
     float: right;
 }
 }
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 768px) and (max-width: 992px){
 .eye-e {
     position: relative;
     bottom: 24px;
@@ -286,6 +315,12 @@
 }
 .width{
     width: 65%;
+}
+.tv-img {
+  position: absolute;
+  height: 26%;
+  width: 430px;
+  
 }
 }
 @media only screen and (min-width: 992px){

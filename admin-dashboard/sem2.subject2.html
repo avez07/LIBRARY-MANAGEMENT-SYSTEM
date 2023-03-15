@@ -301,21 +301,24 @@
                                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                        <form action="" class="modal-form" onsubmit="Video() && Pdf(); return false">
+                                        <form action="" class="modal-form" onsubmit="return Video() && Pdf();">
                                         <div class="row">
                                             <div class="col-lg-6 py-2">
                                                 <label for="details" class="label-i"> video title</label>
-                                                <input type="text" class="modal-input" placeholder="Enter video title">
+                                                <input type="text" class="modal-input form-control" id="vid-t1" placeholder="Enter video title">
+                                                <span class="fw-semibold text-danger" id="vid-t"></span>
                                              </div>
                                              <div class="col-lg-6 py-2">
                                                 <label for="details" class="label-i"> Notes title</label>
-                                                <input type="text" class="modal-input"  placeholder="Enter Notes title">
+                                                <input type="text" class="modal-input form-control" id="not-t1"  placeholder="Enter Notes title">
+                                                <span class="fw-semibold text-danger" id="not-t"></span>
                                              </div>
                                           <div class="col-lg-6 col-md-6 py-2">
                                           <label for="details" class="label-i">Add video</label>
                                           <input type="file" class="modal-input custom" id="video" >
                                           <span><i class="fa-sharp fa-solid fa-cloud-arrow-up icons"></i></span>
-                                          <span class="text-danger fw-semibold " id="vid"></span>
+                                          <span class="text-danger fw-semibold " id="vid1"></span>
+
                                           </div>
                                           <div class="col-lg-6 col-md-6 py-2">
                                           <label for="details" class="label-i">Add Notes</label>
@@ -325,7 +328,7 @@
                                           </div>
                                           <div class="col-lg-12 py-2">
                                           <label for="details" class="label-i">Discription</label>
-                                          <textarea type="text" class="modal-input" placeholder="Add some discription about your reference"></textarea>
+                                          <textarea type="text" class="modal-input form-control" placeholder="Add some discription about your reference"></textarea>
                                           </div>
                                          
                                           <div class="modal-footer">
@@ -397,6 +400,7 @@
     </a>
 
    
+
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
