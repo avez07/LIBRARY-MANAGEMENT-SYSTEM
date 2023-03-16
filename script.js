@@ -111,19 +111,21 @@ function password(){                                //ipassword show hide functi
      }
 
     }
-    function admin() {
+    function admin() {                                                                    //admin and user login
       const user = document.getElementById('user').value;
       const pass = document.getElementById('password-1').value;
-      const ad = document.getElementsByClassName('admin');
+      var ad = document.getElementsByClassName('admin');
     
       if (user === 'admin' && pass === 'password') {
+        for (let i = 0; i < ad.length; i++) {
+          ad[i].style.display = 'inline-block !important';
+        }
         console.log('Login successful');
         location.href = '/admin-dashboard/book-issue.html';
         return false;
       } else if (user === 'user' && pass === 'password') {
-        for (let i = 0; i < ad.length; i++) {
-          ad[i].style.display = 'none';
-        }
+       
+        
         console.log(ad);
         location.href = '/admin-dashboard/book-issue.html';
         return false;
@@ -132,6 +134,7 @@ function password(){                                //ipassword show hide functi
         return false;
       }
     }
+    
     
       
       function Video() {                                                                 // Adding video validation
@@ -184,9 +187,7 @@ function password(){                                //ipassword show hide functi
           else {
             pd.innerHTML = "";
             tum.innerHTML = "";
-            
             document.getElementById("not-t").innerHTML = "" ;
-            alert("ansari")
             return true;
           }
         }
