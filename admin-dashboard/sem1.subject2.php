@@ -43,7 +43,7 @@
         <ul class="navbar-nav  sidebar sidebar-dark accordion bg-color" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="book-issue.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="book-issue.php">
                 <div class="sidebar-brand-icon">
                     <i class="fa-solid fa-user"></i>
                 </div>
@@ -59,12 +59,12 @@
             </div>
            
             <li class="nav-item active bld admin">
-                <a class="nav-link" href="book-issue.html">
+                <a class="nav-link" href="book-issue.php">
                     <i class="fa-solid fa-book"></i>
                     <span>Book issued</span></a>
             </li>
             <li class="nav-item active bld">
-                <a class="nav-link" href="inventry.html">
+                <a class="nav-link" href="inventry.php">
                     <i class="fa-solid fa-warehouse"></i>
                     <span>Book Inventry</span></a>
             </li>
@@ -117,48 +117,48 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Subjects:</h6>
-                        <a class="collapse-item" href="sem1.subject1.html">subject 1</a>
-                        <a class="collapse-item" href="sem1.subject2.html">subject 2</a>
+                        <a class="collapse-item" href="sem1.subject1.php">subject 1</a>
+                        <a class="collapse-item" href="sem1.subject2.php">subject 2</a>
 
                     </div>
                 </div>
                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Subjects:</h6>
-                        <a class="collapse-item" href="sem2.subject1.html">subject 1</a>
-                        <a class="collapse-item" href="sem2.subject2.html">subject 2</a>
+                        <a class="collapse-item" href="sem2.subject1.php">subject 1</a>
+                        <a class="collapse-item" href="sem2.subject2.php">subject 2</a>
 
                     </div>
                 </div>
                 <div id="collapseFour" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Subjects:</h6>
-                        <a class="collapse-item" href="sem2.subject1.html">subject 1</a>
-                        <a class="collapse-item" href="sem2.subject2.html">subject 2</a>
+                        <a class="collapse-item" href="sem2.subject1.php">subject 1</a>
+                        <a class="collapse-item" href="sem2.subject2.php">subject 2</a>
 
                     </div>
                 </div>
                 <div id="collapseFive" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Subjects:</h6>
-                        <a class="collapse-item" href="sem2.subject1.html">subject 1</a>
-                        <a class="collapse-item" href="sem2.subject2.html">subject 2</a>
+                        <a class="collapse-item" href="sem2.subject1.php">subject 1</a>
+                        <a class="collapse-item" href="sem2.subject2.php">subject 2</a>
 
                     </div>
                 </div>
                 <div id="collapseSix" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Subjects:</h6>
-                        <a class="collapse-item" href="sem2.subject1.html">subject 1</a>
-                        <a class="collapse-item" href="sem2.subject2.html">subject 2</a>
+                        <a class="collapse-item" href="sem2.subject1.php">subject 1</a>
+                        <a class="collapse-item" href="sem2.subject2.php">subject 2</a>
 
                     </div>
                 </div>
                 <div id="collapseSeven" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Subjects:</h6>
-                        <a class="collapse-item" href="sem2.subject1.html">subject 1</a>
-                        <a class="collapse-item" href="sem2.subject2.html">subject 2</a>
+                        <a class="collapse-item" href="sem2.subject1.php">subject 1</a>
+                        <a class="collapse-item" href="sem2.subject2.php">subject 2</a>
                     </div>
                 </div>
             </li>
@@ -170,12 +170,12 @@
                 Interface
             </div>
             <li class="nav-item active bld admin">
-                <a class="nav-link" href="login.datatable.html">
+                <a class="nav-link" href="login.datatable.php">
                     <i class="fa-solid fa-database"></i>
                     <span>user database</span></a>
             </li>
             <li class="nav-item active bld">
-                <a class="nav-link" href="/index.html">
+                <a class="nav-link" href="/index.php">
                     <i class="fa-solid fa-right-from-bracket"></i>
                     <span>Logout</span></a>
             </li>

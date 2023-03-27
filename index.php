@@ -25,8 +25,8 @@
                             <p class="text-center start-form fs-4 p-0 m-0 fw-semibold">Authentication required</p>
                             <p class="text-center start-form fs-5 pt-1 pb-4 fw-semibold">Please log in to access this page</p>
                             <div class="start-form ">
-                                <a href="login.html"><button  class="btn-1"> Log-IN</button></a>
-                                <a href="signup.html"><button  class="btn-1">Sign-UP</button></a>
+                                <a href="login.php"><button  class="btn-1"> Log-IN</button></a>
+                                <a href="signup.php"><button  class="btn-1">Sign-UP</button></a>
                             </div>
                         </div>
                     </div>

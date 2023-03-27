@@ -9,10 +9,11 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>book-issued</title>
+    <title>Book-Inventory</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- common  font-awesome and bootstrap cnd -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
@@ -42,8 +43,8 @@
         <ul class="navbar-nav  sidebar sidebar-dark accordion bg-color" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="book-issue.html">
-                <div class="sidebar-brand-icon ">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="book-issue.php">
+                <div class="sidebar-brand-icon">
                     <i class="fa-solid fa-user"></i>
                 </div>
                 <div class="sidebar-brand-text mx-3">Ansari Avez</div>
@@ -57,13 +58,13 @@
                 Intventory
             </div>
            
-            <li class="nav-item active bld">
-                <a class="nav-link" href="book-issue.html">
+            <li class="nav-item active bld admin">
+                <a class="nav-link" href="book-issue.php">
                     <i class="fa-solid fa-book"></i>
                     <span>Book issued</span></a>
             </li>
             <li class="nav-item active bld">
-                <a class="nav-link" href="inventry.html">
+                <a class="nav-link" href="inventry.php">
                     <i class="fa-solid fa-warehouse"></i>
                     <span>Book Inventry</span></a>
             </li>
@@ -116,48 +117,48 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Subjects:</h6>
-                        <a class="collapse-item" href="sem1.subject1.html">subject 1</a>
-                        <a class="collapse-item" href="sem1.subject2.html">subject 2</a>
+                        <a class="collapse-item" href="sem1.subject1.php">subject 1</a>
+                        <a class="collapse-item" href="sem1.subject2.php">subject 2</a>
 
                     </div>
                 </div>
                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Subjects:</h6>
-                        <a class="collapse-item" href="sem2.subject1.html">subject 1</a>
-                        <a class="collapse-item" href="sem2.subject2.html">subject 2</a>
+                        <a class="collapse-item" href="sem2.subject1.php">subject 1</a>
+                        <a class="collapse-item" href="sem2.subject2.php">subject 2</a>
 
                     </div>
                 </div>
                 <div id="collapseFour" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Subjects:</h6>
-                        <a class="collapse-item" href="sem2.subject1.html">subject 1</a>
-                        <a class="collapse-item" href="sem2.subject2.html">subject 2</a>
+                        <a class="collapse-item" href="sem2.subject1.php">subject 1</a>
+                        <a class="collapse-item" href="sem2.subject2.php">subject 2</a>
 
                     </div>
                 </div>
                 <div id="collapseFive" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Subjects:</h6>
-                        <a class="collapse-item" href="sem2.subject1.html">subject 1</a>
-                        <a class="collapse-item" href="sem2.subject2.html">subject 2</a>
+                        <a class="collapse-item" href="sem2.subject1.php">subject 1</a>
+                        <a class="collapse-item" href="sem2.subject2.php">subject 2</a>
 
                     </div>
                 </div>
                 <div id="collapseSix" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Subjects:</h6>
-                        <a class="collapse-item" href="sem2.subject1.html">subject 1</a>
-                        <a class="collapse-item" href="sem2.subject2.html">subject 2</a>
+                        <a class="collapse-item" href="sem2.subject1.php">subject 1</a>
+                        <a class="collapse-item" href="sem2.subject2.php">subject 2</a>
 
                     </div>
                 </div>
                 <div id="collapseSeven" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Subjects:</h6>
-                        <a class="collapse-item" href="sem2.subject1.html">subject 1</a>
-                        <a class="collapse-item" href="sem2.subject2.html">subject 2</a>
+                        <a class="collapse-item" href="sem2.subject1.php">subject 1</a>
+                        <a class="collapse-item" href="sem2.subject2.php">subject 2</a>
                     </div>
                 </div>
             </li>
@@ -169,17 +170,16 @@
                 Interface
             </div>
             <li class="nav-item active bld admin">
-                <a class="nav-link" href="login.datatable.html">
+                <a class="nav-link" href="login.datatable.php">
                     <i class="fa-solid fa-database"></i>
                     <span>user database</span></a>
             </li>
             <li class="nav-item active bld">
-                <a class="nav-link" href="/index.html">
+                <a class="nav-link" href="/index.php">
                     <i class="fa-solid fa-right-from-bracket"></i>
                     <span>Logout</span></a>
             </li>
         </ul>
-        
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -284,67 +284,60 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800 fw-bold">Book issued details </h1>
+                        <h1 class="h3 mb-0 text-gray-800 fw-bold">Sem-1 Subject-2 </h1>
                          
                            <button class="d-none d-sm-inline-block btn btn-sm btn-color shadow-sm fs-6 admin" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-regular fa-square-plus pe-2 btn-color">
-                           </i>  Add student</button></a>
+                           </i>  Add Referance</button></a>
                            <!-- Button trigger modal -->
 
                     </div>
 
                     <!-- popup modal for add student details for offline book issued -->
-                    <div class="modal animate"   id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
-                        <div class="modal-dialog  modal-dialog-centered " >
-                          <div class="modal-content" style="border: 3px solid #c8b59a;">
+                    <div class="modal animate"   id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog  modal-dialog-centered">
+                          <div class="modal-content">
                                 <div class="modal-header">
-                                  <h1 class="modal-title fs-5" id="exampleModalLabel">Student Detail</h1>
+                                  <h1 class="modal-title fs-5" id="exampleModalLabel">Referance</h1>
                                 
                                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                        <form action="" class="modal-form" onsubmit="return validate2()">
+                                        <form action="" class="modal-form" onsubmit="return Video() && Pdf();">
                                         <div class="row">
-                                        
-                                          <div class="col-lg-6 py-2">
-                                          <label for="details" class="label-m">Student Name</label>
-                                          <input type="text" class="modal-input" id="s-name1" placeholder="Enter the student name">
-                                          <span class="fw-semibold text-danger" id="s-name"></span>
+                                            <div class="col-lg-6 py-2">
+                                                <label for="details" class="label-i"> video title</label>
+                                                <input type="text" class="modal-input form-control" id="vid-t1" placeholder="Enter video title">
+                                                <span class="fw-semibold text-danger" id="vid-t"></span>
+                                             </div>
+                                             <div class="col-lg-6 py-2">
+                                                <label for="details" class="label-i"> Notes title</label>
+                                                <input type="text" class="modal-input form-control" id="not-t1"  placeholder="Enter Notes title">
+                                                <span class="fw-semibold text-danger" id="not-t"></span>
+                                             </div>
+                                          <div class="col-lg-6 col-md-6">
+                                          <label for="details" class="label-i">Add video</label>
+                                          <input type="file" class="modal-input custom" id="video" >
+                                          <span><i class="fa-sharp fa-solid fa-cloud-arrow-up icons"></i></span>
+                                          <span class="text-danger fw-semibold " id="vid1"></span>
+
                                           </div>
-                                          <div class="col-lg-6 py-2">
-                                          <label for="details" class="label-m">Student id</label>
-                                          <input type="text" class="modal-input" id="s-id1" placeholder="Enter the student id">
-                                          <span class="fw-semibold text-danger" style="text-transform: none;" id="s-id"></span>
+                                          <div class="col-lg-6 col-md-6">
+                                            <label for="details" class="label-i">Add Notes</label>
+                                            <input type="file" class="modal-input custom" id="pdf"  multiple>
+                                            <span><i class="fa-solid fa-file-pdf icons"></i></span>
+                                            <span class="text-danger fw-semibold " id="pd"></span>
                                           </div>
-                                          <div class="col-lg-6 py-2">
-                                          <label for="details" class="label-m">Phone</label>
-                                          <input type="text" class="modal-input" id="s-num1" placeholder="Enter student phone number">
-                                          <span class="fw-semibold text-danger" id="s-num"></span>
+                                          <div class="col-lg-12">
+                                            <label for="details" class="label-i text-capitalize">Add thamb nail</label>
+                                            <input type="file" class="modal-input custom" id="thumb"  multiple>
+                                            <span><i class="fa-solid fa-file-pdf icons"></i></span>
+                                            <span class="text-danger fw-semibold " id="tum"></span>
                                           </div>
-                                          <div class="col-lg-6 py-2">
-                                          <label for="details" class="label-m">Address</label>
-                                          <input type="text" class="modal-input" id="s-add1" placeholder="Enter the student address">
-                                          <span class="fw-semibold text-danger" id="s-add"></span>
+                                          <div class="col-lg-12">
+                                          <label for="details" class="label-i">Discription</label>
+                                          <textarea type="text" class="modal-input form-control" placeholder="Add some discription about your reference"></textarea>
                                           </div>
-                                          <div class="col-lg-6 py-2">
-                                          <label for="details" class="label-m">Book</label>
-                                          <input type="text" class="modal-input" id="b-name1" placeholder="Enter the book name">
-                                          <span class="fw-semibold text-danger" id="b-name"></span>
-                                          </div>
-                                          <div class="col-lg-6 py-2">
-                                          <label for="details" class="label-m">Book id</label>
-                                          <input type="text" class="modal-input" id="b-id1" placeholder="Enter the book id">
-                                          <span class="fw-semibold text-danger" id="b-id"></span>
-                                          </div>
-                                          <div class="col-lg-6 py-2">
-                                           <label for="details" class="label-m">Issued date</label>
-                                          <input type="date" class="modal-input text-uppercase" id="issu1">
-                                          <span class="fw-semibold text-danger" id="issu"></span>
-                                          </div>
-                                          <div class="col-lg-6 py-2">
-                                           <label for="details" class="label-m">Return date</label>
-                                          <input type="date" class="modal-input text-uppercase" id="retu">
-                                          <span class="fw-semibold text-danger" id="ret"></span>
-                                          </div>
+                                         
                                           <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                             <input type="submit" value="Add" class="btn-color sub" >
@@ -376,24 +369,58 @@
 
                         </div>
                     </div>
-                    <div class="tables" style="overflow-x:auto;">
-                        <table class="datatables" id="datatables">
-                            <thead>
-                                <th class="t-head" style="width:3% ;">ID</th>
-                                <th class="t-head" style="width:17% ;">Name</th>
-                                <th class="t-head" style="width:10% ;">Student ID</th>
-                                <th class="t-head" style="width: 13%;">Phone Number</th>
-                                <th class="t-head" style="width: 17%;">Address</th>
-                                <th class="t-head" style="width: 10%;">Book</th>
-                                <th class="t-head" style="width: 10%;">Book ID</th>
-                                <th class="t-head" style="width:10% ;">Issued Date</th>
-                                <th class="t-head" style="width: 10%;"> Return Date</th>
-                            </thead>
-                        </table>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="card notes pb-0">
+                                    <img src="/images/tambnail-example.jpg" alt="tambnail image">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between">
+                                            <h4 class="card-title fw-semibold">Practical 1</h4>
+                                            <span style="cursor: pointer;"><i class="fa-solid fa-circle-play text-danger fs-2"></i></span>
+                                        </div>
+                                        <p class="fs-5 text-capitalize fw-semibold py-3">dail pad</p>
+                                      <a href="#" class="btn btn-primary text-capitalize float-end"  data-bs-toggle="modal" data-bs-target="#session">view session</a>
+                                    </div>
+                                  </div>
+                            </div>
+                            </div>
+                        </div>
+                        <!-- madal for session  -->
+                        <div class="Session">
+                            <div class="modal animate" id="session" tabindex="-1" aria-labelledby="exampleModalLabe" aria-hidden="true">
+                                <div class="modal-dialog modal-lg modal-dialog-centered">
+                                  <div class="modal-content px-3">
+                                        <div class="modal-header">
+                                          <h1 class="modal-title fs-5" id="exampleModalLabe2">Session</h1>
+                                        
+                                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <h3 class="card-title fw-semibold text-dark">Practical 1</h3>
+                                            <p class="fs-4 text-capitalize fw-semibold text-dark py-2">dail pad</p>
+                                            <p class="fs-4 text-capitalize fw-semibold text-dark m-0">discription:</p>
+                                            <p class="fs-5 text-capitalize text-justify fw-semibold text-dark py-2" style="text-indent: 80px;">This chapter attempts to summarize the book by giving short practical advices to business leaders
+                                                 on how to understand the concept of security and position and manage the security function in an 
+                                                 enterprise so that it will produce the best results. Each instruction in this chapter is a concept
+                                                  that is thoroughly addressed in previous chapters that are listed at the end of each paragraph. </p>
+                                            <p class="fs-4 text-capitalize fw-semibold text-dark py-2">session video:</p>
 
+                                            <div class="d-flex justify-content-center mb-3">
+                                                <img src="/images/tambnail-example.jpg"  class="tv-img img-fluid" alt="">
+                                                <img src="/images/tv-image.png" class="img-fluid" style="position: relative;" alt="">
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                <a href="/images/prac 9B.docx"><button class="btn-color sub"> Download Pdf</button></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-               
             </div>
                 
             
@@ -413,7 +440,6 @@
         <i class="fas fa-angle-up"></i>
     </a>
 
-   
    
 
     <!-- Bootstrap core JavaScript-->
@@ -448,7 +474,7 @@
       <!-- Page level custom scripts -->
       <!-- <script src="js/demo/datatables-demo.js"></script> -->
 
-
+   
 </body>
 
 </html>

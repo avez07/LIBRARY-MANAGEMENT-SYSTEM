@@ -121,13 +121,13 @@ function password(){                                //ipassword show hide functi
           ad[i].style.display = 'inline-block !important';
         }
         console.log('Login successful');
-        location.href = '/admin-dashboard/book-issue.html';
+        location.href = './admin-dashboard/book-issue.php';
         return false;
       } else if (user === 'user' && pass === 'password') {
        
         
         console.log(ad);
-        location.href = '/admin-dashboard/book-issue.html';
+        location.href = './admin-dashboard/book-issue.php';
         return false;
       } else {
         alert('Invalid username or password');
@@ -231,7 +231,7 @@ function password(){                                //ipassword show hide functi
     //   window.history.forward();
     // };
    
-   function validate2(){                                                        //validation for book issued.html add student form
+   function validate2(){                                                        //validation for book issued.php add student form
     var name = document.getElementById('s-name1').value;
     var id = document.getElementById('s-id1').value;
     var num = document.getElementById('s-num1').value;

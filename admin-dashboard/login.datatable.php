@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Book-Inventory</title>
+    <title>book-issued</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -42,7 +42,7 @@
         <ul class="navbar-nav  sidebar sidebar-dark accordion bg-color" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="book-issue.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="book-issue.php">
                 <div class="sidebar-brand-icon ">
                     <i class="fa-solid fa-user"></i>
                 </div>
@@ -57,13 +57,13 @@
                 Intventory
             </div>
            
-            <li class="nav-item active bld admin">
-                <a class="nav-link" href="book-issue.html">
+            <li class="nav-item active bld">
+                <a class="nav-link" href="book-issue.php">
                     <i class="fa-solid fa-book"></i>
                     <span>Book issued</span></a>
             </li>
             <li class="nav-item active bld">
-                <a class="nav-link" href="inventry.html">
+                <a class="nav-link" href="inventry.php">
                     <i class="fa-solid fa-warehouse"></i>
                     <span>Book Inventry</span></a>
             </li>
@@ -116,48 +116,48 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Subjects:</h6>
-                        <a class="collapse-item" href="sem1.subject1.html">subject 1</a>
-                        <a class="collapse-item" href="sem1.subject2.html">subject 2</a>
+                        <a class="collapse-item" href="sem1.subject1.php">subject 1</a>
+                        <a class="collapse-item" href="sem1.subject2.php">subject 2</a>
 
                     </div>
                 </div>
                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Subjects:</h6>
-                        <a class="collapse-item" href="sem2.subject1.html">subject 1</a>
-                        <a class="collapse-item" href="sem2.subject2.html">subject 2</a>
+                        <a class="collapse-item" href="sem2.subject1.php">subject 1</a>
+                        <a class="collapse-item" href="sem2.subject2.php">subject 2</a>
 
                     </div>
                 </div>
                 <div id="collapseFour" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Subjects:</h6>
-                        <a class="collapse-item" href="sem2.subject1.html">subject 1</a>
-                        <a class="collapse-item" href="sem2.subject2.html">subject 2</a>
+                        <a class="collapse-item" href="sem2.subject1.php">subject 1</a>
+                        <a class="collapse-item" href="sem2.subject2.php">subject 2</a>
 
                     </div>
                 </div>
                 <div id="collapseFive" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Subjects:</h6>
-                        <a class="collapse-item" href="sem2.subject1.html">subject 1</a>
-                        <a class="collapse-item" href="sem2.subject2.html">subject 2</a>
+                        <a class="collapse-item" href="sem2.subject1.php">subject 1</a>
+                        <a class="collapse-item" href="sem2.subject2.php">subject 2</a>
 
                     </div>
                 </div>
                 <div id="collapseSix" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Subjects:</h6>
-                        <a class="collapse-item" href="sem2.subject1.html">subject 1</a>
-                        <a class="collapse-item" href="sem2.subject2.html">subject 2</a>
+                        <a class="collapse-item" href="sem2.subject1.php">subject 1</a>
+                        <a class="collapse-item" href="sem2.subject2.php">subject 2</a>
 
                     </div>
                 </div>
                 <div id="collapseSeven" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Subjects:</h6>
-                        <a class="collapse-item" href="sem2.subject1.html">subject 1</a>
-                        <a class="collapse-item" href="sem2.subject2.html">subject 2</a>
+                        <a class="collapse-item" href="sem2.subject1.php">subject 1</a>
+                        <a class="collapse-item" href="sem2.subject2.php">subject 2</a>
                     </div>
                 </div>
             </li>
@@ -168,17 +168,18 @@
             <div class="sidebar-heading">
                 Interface
             </div>
-            <li class="nav-item active bld admin">
-                <a class="nav-link" href="login.datatable.html">
+            <li class="nav-item active bld">
+                <a class="nav-link" href="login.datatable.php">
                     <i class="fa-solid fa-database"></i>
                     <span>user database</span></a>
             </li>
             <li class="nav-item active bld">
-                <a class="nav-link" href="/index.html">
+                <a class="nav-link" href="/index.php">
                     <i class="fa-solid fa-right-from-bracket"></i>
                     <span>Logout</span></a>
             </li>
         </ul>
+        
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -283,71 +284,10 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800 fw-bold">Book Inventry </h1>
+                        <h1 class="h3 mb-0 text-gray-800 fw-bold">Login  details </h1>
                          
-                           <button class="d-none d-sm-inline-block btn btn-sm btn-color shadow-sm fs-6 admin" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-regular fa-square-plus pe-2 btn-color">
-                           </i>  Add Book</button></a>
                            <!-- Button trigger modal -->
 
-                    </div>
-
-                    <!-- popup modal for add student details for offline book issued -->
-                    <div class="modal animate"   id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog  modal-dialog-centered">
-                          <div class="modal-content">
-                                <div class="modal-header">
-                                  <h1 class="modal-title fs-5" id="exampleModalLabel">Book Inventory</h1>
-                                
-                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                        <form action="" class="modal-form " onsubmit="Pdf(); return false">
-                                        <div class="row">
-                                        
-                                          <div class="col-lg-6 py-2">
-                                          <label for="details" class="label-i">Book name</label>
-                                          <input type="text" class="modal-input" placeholder="Enter the student name">
-                                          </div>
-                                          <div class="col-lg-6 py-2">
-                                          <label for="details" class="label-i">Book id</label>
-                                          <input type="text" class="modal-input" placeholder="Enter the student id">
-                                          </div>
-                                          <div class="col-lg-6 py-2">
-                                          <label for="details" class="label-i">Author Name</label>
-                                          <input type="number" class="modal-input" placeholder="Enter student phone number">
-                                          </div>
-                                          <div class="col-lg-6 py-2">
-                                            <label for="details" class="label-i">Stream</label>
-                                            <input type="text" class="modal-input" placeholder="Enter the student address">
-                                            </div>
-                                            <div class="col-lg-6 py-2">
-                                                <label for="details" class="label-i">Subject</label>
-                                                <input type="text" class="modal-input" placeholder="Enter the student address">
-                                                </div>
-                                          <div class="col-lg-6 py-2">
-                                          <label for="details" class="label-i">Published year</label>
-                                          <input type="text" class="modal-input" placeholder="Enter the student address">
-                                          </div>
-                                          <div class="col-lg-6 py-2">
-                                            <label for="details" class="label-i">Stock</label>
-                                            <input type="number" class="modal-input" placeholder="Enter the quantity of the book">
-                                            </div>
-                                          <div class="col-lg-6 py-2">
-                                            <label for="details" class="label-i">PDF</label>
-                                            <input type="file" class="modal-input custom"id="pdf" placeholder="Enter the student address">
-                                          <span><i class="fa-solid fa-file-pdf icons"></i></span>
-                                          <span class="text-danger fw-semibold " id="pd"></span>
-                                            </div>
-                                           
-                                          <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                            <input type="submit" value="Add" class="btn-color sub" >
-                                          </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <div class="contain-t ">
@@ -374,15 +314,11 @@
                         <table class="datatables" id="datatables">
                             <thead>
                                 <th class="t-head" style="width:3% ;">ID</th>
-                                <th class="t-head" style="width:17% ;">Book Name</th>
-                                <th class="t-head" style="width:14% ;">Book ID</th>
-                                <th class="t-head" style="width: 17%;">Author Name</th>
-                                <th class="t-head" style="width: 12%;">Strem</th>
-                                <th class="t-head" style="width: 14%;">Subject</th>
-                                <th class="t-head" style="width: 12%;">Published year</th>
-                                <th class="t-head admin" style="width: 5%;">Stock</th>
-                                <th class="t-head" style="width: 6%;">PDF</th>
-
+                                <th class="t-head" style="width:22% ;">Name</th>
+                                <th class="t-head" style="width:21% ;">Email ID</th>
+                                <th class="t-head" style="width: 17%;">Username</th>
+                                <th class="t-head" style="width: 15%;">Password</th>
+                                <th class="t-head" style="width: 15%;">Confirm password</th>
                                
                             </thead>
                         </table>
@@ -409,7 +345,25 @@
         <i class="fas fa-angle-up"></i>
     </a>
 
-    
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="/index.php">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
@@ -443,7 +397,7 @@
       <!-- Page level custom scripts -->
       <!-- <script src="js/demo/datatables-demo.js"></script> -->
 
-
+   -->
 </body>
 
 </html>
