@@ -307,7 +307,7 @@ require_once "config.php";
                                         $i_date = $_POST["issu-date"];
                                         $r_date = $_POST["ret-date"];
 
-                                        $conn -> query('use huristic');
+                                        
 
                                         $conn -> query("CREATE TABLE IF NOT EXISTS table_2(
                                              id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,

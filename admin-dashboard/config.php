@@ -8,7 +8,7 @@
  if($conn -> connect_error){
      die('error in connection'+$conn -> connect_error);
  }else{
-     echo('connect susessfull');
+    //  echo('connect susessfull');
  };
  $conn -> query('use huristic');
 ?>
