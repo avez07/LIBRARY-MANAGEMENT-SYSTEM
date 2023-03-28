@@ -373,7 +373,7 @@
                         <div class="row">
                             <div class="col-lg-4">
                                 <div class="card notes pb-0">
-                                    <img src="/images/tambnail-example.jpg" alt="tambnail image">
+                                    <img src="../images/tambnail-example.jpg" alt="tambnail image">
                                     <div class="card-body">
                                         <div class="d-flex justify-content-between">
                                             <h4 class="card-title fw-semibold">Practical 1</h4>
@@ -388,7 +388,7 @@
                         </div>
                         <!-- madal for session  -->
                         <div class="Session">
-                            <div class="modal animate" id="session" tabindex="-1" aria-labelledby="exampleModalLabe" aria-hidden="true">
+                            <div class="modal animate" id="session" tabindex="-1" aria-labelledby="exampleModalLabe" aria-hidden="true" style = "ov">
                                 <div class="modal-dialog modal-lg modal-dialog-centered">
                                   <div class="modal-content px-3">
                                         <div class="modal-header">
@@ -398,17 +398,17 @@
                                         </div>
                                         <div class="modal-body">
                                             <h3 class="card-title fw-semibold text-dark">Practical 1</h3>
-                                            <p class="fs-4 text-capitalize fw-semibold text-dark py-2">dail pad</p>
-                                            <p class="fs-4 text-capitalize fw-semibold text-dark m-0">discription:</p>
-                                            <p class="fs-5 text-capitalize text-justify fw-semibold text-dark py-2" style="text-indent: 80px;">This chapter attempts to summarize the book by giving short practical advices to business leaders
+                                            <p class="fs-5 text-capitalize fw-semibold text-dark py-2">dail pad</p>
+                                            <p class="fs-5 text-capitalize fw-semibold text-dark m-0">discription:</p>
+                                            <p class="fs-6 text-capitalize text-justify fw-semibold text-dark py-2" style="text-indent: 80px;">This chapter attempts to summarize the book by giving short practical advices to business leaders
                                                  on how to understand the concept of security and position and manage the security function in an 
                                                  enterprise so that it will produce the best results. Each instruction in this chapter is a concept
                                                   that is thoroughly addressed in previous chapters that are listed at the end of each paragraph. </p>
                                             <p class="fs-4 text-capitalize fw-semibold text-dark py-2">session video:</p>
 
                                             <div class="d-flex justify-content-center mb-3">
-                                                <img src="/images/tambnail-example.jpg"  class="tv-img img-fluid" alt="">
-                                                <img src="/images/tv-image.png" class="img-fluid" style="position: relative;" alt="">
+                                                <img src="../images/tambnail-example.jpg"  class="tv-img img-fluid" alt="">
+                                                <img src="../images/tv-image.png" class="img-fluid" style="position: relative;" alt="">
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

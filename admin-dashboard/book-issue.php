@@ -325,25 +325,15 @@ require_once "config.php";
                                         if (!$query_template) {
                                             die("Error preparing SQL statement: " . $conn->error);
                                         }
-                                        $result = $query_template -> bind_param('siissiii',
-                                         $s_name ,
-                                          $s_id ,
-                                           $s_phone , 
-                                           $s_addr,
-                                            $b_name ,
-                                             $b_id ,
-                                              $i_date ,
-                                               $r_date
-                                            );
-                                        $query_template -> execute();
+                                        $result = $query_template -> bind_param('siissiii',$s_name, $s_id, $s_phone, $s_addr, $b_name, $b_id, $i_date, $r_date);
+                                       
                                         if (!$result) {
-                                            die("Error preparing SQL statement: " . $conn->error);
+                                            die("Error preparing SQL statement: " . $query_template->error);
                                         }
-                                        if ($query_template -> execute()) {
-                                            echo "data added sussesfully";
-                                        } else{
-                                            echo "not added";
-                                        }
+                                        $query_template -> execute();
+                                        
+                                        
+                                        
                                     };
                                    
                                 ?>
@@ -360,7 +350,7 @@ require_once "config.php";
                                 <div class="modal-body">
 
                                
-                                        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" class="modal-form" onsubmit="return validate2()">
+                                        <form action="" method="post" class="modal-form" onsubmit="validate2(); return false">
                                         <div class="row">
                                         
                                           <div class="col-lg-6 py-2">
