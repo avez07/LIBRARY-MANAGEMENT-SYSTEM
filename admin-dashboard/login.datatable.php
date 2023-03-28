@@ -196,7 +196,7 @@
                         <i class="fa fa-bars"></i>
                     </button>
                     <div>
-                        <img src="/images/book.png" class="web-logo" alt="website logo">
+                        <img src="../images/book.png" class="web-logo" alt="website logo">
                     </div>
 
                     <!-- Topbar Search -->
