@@ -1,3 +1,6 @@
+<?php
+require_once "config.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -291,6 +294,59 @@
                            <!-- Button trigger modal -->
 
                     </div>
+                    <?php
+                           
+                                    if ($_SERVER ["REQUEST_METHOD"] == "POST") {
+                                        
+                                        $s_name = $_POST["student-name"];
+                                        $s_id = $_POST["student-id"];
+                                        $s_phone = $_POST["student-phone"];
+                                        $s_addr = $_POST["student-addr"];
+                                        $b_name = $_POST["book-name"];
+                                        $b_id = $_POST["book-id"];
+                                        $i_date = $_POST["issu-date"];
+                                        $r_date = $_POST["ret-date"];
+
+                                        $conn -> query('use huristic');
+
+                                        $conn -> query("CREATE TABLE IF NOT EXISTS table_2(
+                                             id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+                                         STUDENT_NAME varchar(30) NOT NULL,
+                                          STUDENT_ID INT NOT NUll,
+                                           STUDENT_PHONE INT NOT NUll,
+                                           STUDENT_ADDR varchar(60) NOT NUll,
+                                            BOOK_NAME varchar(30) NOT NULL,
+                                             BOOK_ID INT NOT NUll,
+                                              ISSUE DATE NOT NULL,
+                                               RETURN_ DATE NOT NULL 
+                                               );");
+
+                                        $query_template = $conn -> prepare("INSERT INTO table_2 (STUDENT_NAME , STUDENT_ID , STUDENT_PHONE , STUDENT_ADDR , BOOK_NAME , BOOK_ID , ISSUE , RETURN_) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?)");
+                                        if (!$query_template) {
+                                            die("Error preparing SQL statement: " . $conn->error);
+                                        }
+                                        $result = $query_template -> bind_param('siissiii',
+                                         $s_name ,
+                                          $s_id ,
+                                           $s_phone , 
+                                           $s_addr,
+                                            $b_name ,
+                                             $b_id ,
+                                              $i_date ,
+                                               $r_date
+                                            );
+                                        $query_template -> execute();
+                                        if (!$result) {
+                                            die("Error preparing SQL statement: " . $conn->error);
+                                        }
+                                        if ($query_template -> execute()) {
+                                            echo "data added sussesfully";
+                                        } else{
+                                            echo "not added";
+                                        }
+                                    };
+                                   
+                                ?>
 
                     <!-- popup modal for add student details for offline book issued -->
                     <div class="modal animate"   id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
@@ -302,47 +358,49 @@
                                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                        <form action="" class="modal-form" onsubmit="return validate2()">
+
+                               
+                                        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" class="modal-form" onsubmit="return validate2()">
                                         <div class="row">
                                         
                                           <div class="col-lg-6 py-2">
                                           <label for="details" class="label-m">Student Name</label>
-                                          <input type="text" class="modal-input" id="s-name1" placeholder="Enter the student name">
+                                          <input type="text" class="modal-input" name="student-name" id="s-name1" placeholder="Enter the student name">
                                           <span class="fw-semibold text-danger" id="s-name"></span>
                                           </div>
                                           <div class="col-lg-6 py-2">
                                           <label for="details" class="label-m">Student id</label>
-                                          <input type="text" class="modal-input" id="s-id1" placeholder="Enter the student id">
+                                          <input type="text" class="modal-input" id="s-id1" name="student-id" placeholder="Enter the student id">
                                           <span class="fw-semibold text-danger" style="text-transform: none;" id="s-id"></span>
                                           </div>
                                           <div class="col-lg-6 py-2">
                                           <label for="details" class="label-m">Phone</label>
-                                          <input type="text" class="modal-input" id="s-num1" placeholder="Enter student phone number">
+                                          <input type="text" class="modal-input" id="s-num1" name="student-phone" placeholder="Enter student phone number">
                                           <span class="fw-semibold text-danger" id="s-num"></span>
                                           </div>
                                           <div class="col-lg-6 py-2">
                                           <label for="details" class="label-m">Address</label>
-                                          <input type="text" class="modal-input" id="s-add1" placeholder="Enter the student address">
+                                          <input type="text" class="modal-input" id="s-add1" name="student-addr" placeholder="Enter the student address">
                                           <span class="fw-semibold text-danger" id="s-add"></span>
                                           </div>
                                           <div class="col-lg-6 py-2">
                                           <label for="details" class="label-m">Book</label>
-                                          <input type="text" class="modal-input" id="b-name1" placeholder="Enter the book name">
+                                          <input type="text" class="modal-input" id="b-name1" name="book-name" placeholder="Enter the book name">
                                           <span class="fw-semibold text-danger" id="b-name"></span>
                                           </div>
                                           <div class="col-lg-6 py-2">
                                           <label for="details" class="label-m">Book id</label>
-                                          <input type="text" class="modal-input" id="b-id1" placeholder="Enter the book id">
+                                          <input type="text" class="modal-input" id="b-id1" name="book-id" placeholder="Enter the book id">
                                           <span class="fw-semibold text-danger" id="b-id"></span>
                                           </div>
                                           <div class="col-lg-6 py-2">
                                            <label for="details" class="label-m">Issued date</label>
-                                          <input type="date" class="modal-input text-uppercase" id="issu1">
+                                          <input type="date" class="modal-input text-uppercase" name="issu-date" id="issu1">
                                           <span class="fw-semibold text-danger" id="issu"></span>
                                           </div>
                                           <div class="col-lg-6 py-2">
                                            <label for="details" class="label-m">Return date</label>
-                                          <input type="date" class="modal-input text-uppercase" id="retu">
+                                          <input type="date" class="modal-input text-uppercase" name="ret-date" id="retu">
                                           <span class="fw-semibold text-danger" id="ret"></span>
                                           </div>
                                           <div class="modal-footer">
@@ -376,20 +434,9 @@
 
                         </div>
                     </div>
-                    <?php
-                    $servername = 'localhost';
-                    $user = 'root';
-                    $password = '';
-                    
-                    $conn = new mysqli($servername , $user , $password);
-                    
-                    if($conn -> connect_error){
-                        die('error in connection'+$conn -> connect_error);
-                    }else{
-                        echo('connect susessfull');
-                    };
-                    $conn -> query('use huristic');
-                    $sql_query = "SELECT * FROM table_1";
+                    <?php              
+                   
+                    $sql_query = "SELECT * FROM table_2";
                     $sql_result = $conn -> query($sql_query);
                     $row = $sql_result -> fetch_assoc();
                    echo '<div class="tables" style="overflow-x:auto;">';
@@ -409,14 +456,15 @@
                            if ($sql_result -> num_rows > 0) {
                             while ($row) {
                                 echo '<tr>';
-                                echo '<td>'.$row['ID']. '</td>';
-                                echo '<td>'.$row['FRISTNAME']. '</td>';
-                                echo '<td>'.$row['LASTNAME']. '</td>';
-                                echo '<td>'.$row['ROLLNO']. '</td>';
-                                echo '<td>'.$row['ID']. '</td>';
-                                echo '<td>'.$row['FRISTNAME']. '</td>';
-                                echo '<td>'.$row['LASTNAME']. '</td>';
-                                echo '<td>'.$row['ROLLNO']. '</td>';
+                                echo '<td>'.$row['id']. '</td>';
+                                echo '<td>'.$row['STUDENT_NAME']. '</td>';
+                                echo '<td>'.$row['STUDENT_ID']. '</td>';
+                                echo '<td>'.$row['STUDENT_PHONE']. '</td>';
+                                echo '<td>'.$row['STUDENT_ADDR']. '</td>';
+                                echo '<td>'.$row['BOOK_NAME']. '</td>';
+                                echo '<td>'.$row['BOOK_ID']. '</td>';
+                                echo '<td>'.$row['ISSUE']. '</td>';
+                                echo '<td>'.$row['RETURN_']. '</td>';
                                 echo '</tr>';
                               $row = $sql_result -> fetch_assoc();
                             }
