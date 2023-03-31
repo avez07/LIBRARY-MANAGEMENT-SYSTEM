@@ -179,6 +179,10 @@
                     <i class="fa-solid fa-right-from-bracket"></i>
                     <span>Logout</span></a>
             </li>
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline mt-4">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
         </ul>
         <!-- End of Sidebar -->
 
@@ -318,14 +322,14 @@
                                           <label for="details" class="label-i">Add video</label>
                                           <input type="file" class="modal-input custom" id="video" >
                                           <span><i class="fa-sharp fa-solid fa-cloud-arrow-up icons"></i></span>
-                                          <span class="text-danger fw-semibold " id="vid1"></span>
+                                          <span class="text-danger fw-semibold position" id="vid1"></span>
 
                                           </div>
                                           <div class="col-lg-6 col-md-6">
                                             <label for="details" class="label-i">Add Notes</label>
                                             <input type="file" class="modal-input custom" id="pdf"  multiple>
                                             <span><i class="fa-solid fa-file-pdf icons"></i></span>
-                                            <span class="text-danger fw-semibold " id="pd"></span>
+                                            <span class="text-danger fw-semibold  position" id="pd"></span>
                                           </div>
                                           <div class="col-lg-12">
                                             <label for="details" class="label-i text-capitalize">Add thamb nail</label>
@@ -373,7 +377,7 @@
                         <div class="row">
                             <div class="col-lg-4">
                                 <div class="card notes pb-0">
-                                    <img src="/images/tambnail-example.jpg" alt="tambnail image">
+                                    <img src="../images/tambnail-example.jpg" alt="tambnail image">
                                     <div class="card-body">
                                         <div class="d-flex justify-content-between">
                                             <h4 class="card-title fw-semibold">Practical 1</h4>
@@ -388,9 +392,9 @@
                         </div>
                         <!-- madal for session  -->
                         <div class="Session">
-                            <div class="modal animate" id="session" tabindex="-1" aria-labelledby="exampleModalLabe" aria-hidden="true">
+                            <div class="modal animate" id="session" tabindex="-1" aria-labelledby="exampleModalLabe" aria-hidden="true" style = "ov">
                                 <div class="modal-dialog modal-lg modal-dialog-centered">
-                                  <div class="modal-content px-3">
+                                  <div class="modal-content px-3 over">
                                         <div class="modal-header">
                                           <h1 class="modal-title fs-5" id="exampleModalLabe2">Session</h1>
                                         
@@ -398,17 +402,17 @@
                                         </div>
                                         <div class="modal-body">
                                             <h3 class="card-title fw-semibold text-dark">Practical 1</h3>
-                                            <p class="fs-4 text-capitalize fw-semibold text-dark py-2">dail pad</p>
-                                            <p class="fs-4 text-capitalize fw-semibold text-dark m-0">discription:</p>
-                                            <p class="fs-5 text-capitalize text-justify fw-semibold text-dark py-2" style="text-indent: 80px;">This chapter attempts to summarize the book by giving short practical advices to business leaders
+                                            <p class="fs-5 text-capitalize fw-semibold text-dark py-2">dail pad</p>
+                                            <p class="fs-5 text-capitalize fw-semibold text-dark m-0">discription:</p>
+                                            <p class="fs-6 text-capitalize text-justify fw-semibold text-dark py-2" style="text-indent: 80px;">This chapter attempts to summarize the book by giving short practical advices to business leaders
                                                  on how to understand the concept of security and position and manage the security function in an 
                                                  enterprise so that it will produce the best results. Each instruction in this chapter is a concept
                                                   that is thoroughly addressed in previous chapters that are listed at the end of each paragraph. </p>
                                             <p class="fs-4 text-capitalize fw-semibold text-dark py-2">session video:</p>
 
                                             <div class="d-flex justify-content-center mb-3">
-                                                <img src="/images/tambnail-example.jpg"  class="tv-img img-fluid" alt="">
-                                                <img src="/images/tv-image.png" class="img-fluid" style="position: relative;" alt="">
+                                                <img src="../images/tambnail-example.jpg"  class="tv-img img-fluid" alt="">
+                                                <img src="../images/tv-image.png" class="img-fluid" style="position: relative;" alt="">
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -452,22 +456,18 @@
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
 
-    <!-- Page level plugins -->
-    <script src="vendor/chart.js/Chart.min.js"></script>
-
-    <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
+  
 
     <!-- animation js link -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <!-- common bootstrap and javascript file  -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    <script src="/script.js"></script>
+     
+    <!-- custom validation javascript file  -->
+     <script src="../script.js"></script>
 
-        <!-- custom validation javascript file  -->
-        <script src="../script.js"></script>
+     
 
    
 </body>

@@ -188,7 +188,7 @@
     padding-top: 15px;
     border-radius: 5px;
     box-shadow: -6px 6px 20px;
-    height: 80%;
+    height: 75%;
   }
   textarea{
     resize: none;
@@ -252,15 +252,26 @@
 }
 .tv-img{
   position: absolute;
-  height: 37%;
+  height: 40%;
   width: 582px;
-  bottom: 107px;
+  bottom: 112px;
+}
+#session{
+  overflow: hidden;
+}
+.over{
+  height: 92vh;
+  overflow-y: scroll;
+}
+.position{
+  position: absolute;
+    left: 23px;
 }
 
 @media only screen and (max-width: 400px){
   .tv-img {
     position: absolute;
-    height: 16%;
+    height: 20%;
     width: 290px;
  
 }
@@ -269,7 +280,7 @@
 @media only screen and (min-width: 400px) and (max-width:600px){
   .tv-img {
     position: absolute;
-    height: 18%;
+    height: 21%;
     width: 322px;
 
 }
@@ -320,7 +331,12 @@
   position: absolute;
   height: 26%;
   width: 430px;
+  bottom: 143px;
   
+}
+.over{
+  height: 55rem;
+  overflow-y: scroll;
 }
 }
 @media only screen and (min-width: 992px){

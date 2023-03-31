@@ -179,6 +179,10 @@
                     <i class="fa-solid fa-right-from-bracket"></i>
                     <span>Logout</span></a>
             </li>
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline mt-4">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
         </ul>
         <!-- End of Sidebar -->
 
@@ -318,14 +322,14 @@
                                           <label for="details" class="label-i">Add video</label>
                                           <input type="file" class="modal-input custom" id="video" >
                                           <span><i class="fa-sharp fa-solid fa-cloud-arrow-up icons"></i></span>
-                                          <span class="text-danger fw-semibold " id="vid1"></span>
+                                          <span class="text-danger fw-semibold position" id="vid1"></span>
 
                                           </div>
                                           <div class="col-lg-6 col-md-6">
                                             <label for="details" class="label-i">Add Notes</label>
                                             <input type="file" class="modal-input custom" id="pdf"  multiple>
                                             <span><i class="fa-solid fa-file-pdf icons"></i></span>
-                                            <span class="text-danger fw-semibold " id="pd"></span>
+                                            <span class="text-danger fw-semibold  position" id="pd"></span>
                                           </div>
                                           <div class="col-lg-12">
                                             <label for="details" class="label-i text-capitalize">Add thamb nail</label>
@@ -390,7 +394,7 @@
                         <div class="Session">
                             <div class="modal animate" id="session" tabindex="-1" aria-labelledby="exampleModalLabe" aria-hidden="true" style = "ov">
                                 <div class="modal-dialog modal-lg modal-dialog-centered">
-                                  <div class="modal-content px-3">
+                                  <div class="modal-content px-3 over">
                                         <div class="modal-header">
                                           <h1 class="modal-title fs-5" id="exampleModalLabe2">Session</h1>
                                         
@@ -452,19 +456,16 @@
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
 
-    <!-- Page level plugins -->
-    <script src="vendor/chart.js/Chart.min.js"></script>
-
-    <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
+  
 
     <!-- animation js link -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <!-- common bootstrap and javascript file  -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    <script src="/script.js"></script>
+     
+    <!-- custom validation javascript file  -->
+     <script src="../script.js"></script>
 
      
 
