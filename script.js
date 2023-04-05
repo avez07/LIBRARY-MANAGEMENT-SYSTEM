@@ -116,17 +116,9 @@ function password(){                                //ipassword show hide functi
       const pass = document.getElementById('password-1').value;
       var ad = document.getElementsByClassName('admin');
     
-      if (user === 'admin' && pass === 'password') {
-        for (let i = 0; i < ad.length; i++) {
-          ad[i].style.display = 'inline-block !important';
-        }
-        console.log('Login successful');
-        location.href = './admin-dashboard/book-issue.php';
-        return false;
-      } else if (user === 'user' && pass === 'password') {
-       
+      if (user === 'AAvez' && pass === 'password') {
         
-        console.log(ad);
+        console.log('Login successful');
         location.href = './admin-dashboard/book-issue.php';
         return false;
       } else {

@@ -347,8 +347,16 @@
 .eye-e {
     position: relative;
     bottom: 25px;
- 
+ left: -9px;
     float: right;
+}
+.eye-f{
+  position: absolute;
+  display: inline-block;
+  bottom: 96px;
+  right: 521px;
+  text-align: right;
+  color: #000;
 }
 .width{
     width: 35%;

@@ -10,6 +10,7 @@
     <meta name="author" content="">
 
     <title>Book-Inventory</title>
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -175,7 +176,7 @@
                     <span>user database</span></a>
             </li>
             <li class="nav-item active bld">
-                <a class="nav-link" href="/index.php">
+                <a class="nav-link" href="../index.php">
                     <i class="fa-solid fa-right-from-bracket"></i>
                     <span>Logout</span></a>
             </li>

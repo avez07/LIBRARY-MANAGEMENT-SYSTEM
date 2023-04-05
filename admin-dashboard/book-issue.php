@@ -13,6 +13,7 @@ require_once "config.php";
     <meta name="author" content="">
 
     <title>book-issued</title>
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -49,7 +50,10 @@ require_once "config.php";
                 <div class="sidebar-brand-icon ">
                     <i class="fa-solid fa-user"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">Ansari Avez</div>
+                <?php
+                session_start();
+               echo "<div class='sidebar-brand-text mx-3'>".$_SESSION["user_name"]."</div>";
+                ?>
             </a>
 
             <!-- Divider -->
@@ -177,7 +181,7 @@ require_once "config.php";
                     <span>user database</span></a>
             </li>
             <li class="nav-item active bld">
-                <a class="nav-link" href="/index.php">
+                <a class="nav-link" href="../index.php">
                     <i class="fa-solid fa-right-from-bracket"></i>
                     <span>Logout</span></a>
             </li>
@@ -329,7 +333,7 @@ require_once "config.php";
                                         if (!$query_template) {
                                             die("Error preparing SQL statement: " . $conn->error);
                                         }
-                                        $result = $query_template -> bind_param('siissiii',$s_name, $s_id, $s_phone, $s_addr, $b_name, $b_id, $i_date, $r_date);
+                                        $result = $query_template -> bind_param('siississ',$s_name, $s_id, $s_phone, $s_addr, $b_name, $b_id, $i_date, $r_date);
                                        
                                         if (!$result) {
                                             die("Error preparing SQL statement: " . $query_template->error);
@@ -354,7 +358,7 @@ require_once "config.php";
                                 <div class="modal-body">
 
                                
-                                        <form action="" method="post" class="modal-form" onsubmit=" return validate2();">
+                                        <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" class="modal-form" onsubmit=" return validate2();">
                                         <div class="row">
                                         
                                           <div class="col-lg-6 py-2">
