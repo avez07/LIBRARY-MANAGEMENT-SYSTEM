@@ -52,7 +52,7 @@
                              
 
                                  <input type="submit" value="Sign UP"  class="submit" id="submit">
-                             <p class="text-center m-0">Alredy have a account ? <a href="login.html">Login</a></p>
+                             <p class="text-center m-0">Alredy have a account ? <a href="./login.php">Login</a></p>
 
                         </div>
                     </form>

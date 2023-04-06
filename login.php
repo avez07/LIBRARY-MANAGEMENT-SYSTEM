@@ -24,31 +24,35 @@
             <div class="d-flex align-items-center justify-content-center" style="height: 100vh;">
                 <div class="width">
                     <div style="text-align: center;">
-                        <img src="images/book.png" class="img-fluid " alt="logo image">
+                        <img src="images/book.png" class="img-fluid " alt="logo image" action = "./admin-dashboard/book-issue.php">
                     </div> 
-                    <form class="login-form" method="post" onsubmit="admin(); return true" >
+                    <form class="login-form" method="post">
                         <div class="borders">
                             <p class="head">login</p>
                             <?php
-    session_start();
+                                session_start();
+                                if(isset($_POST["user"])){
 
-   
+                                    $_SESSION['user_name'] = $_POST["user"];
+                                }
 
-    // Check if the session variable is set
-    if (($_SESSION['user_name'] == "Avez") && ($_SESSION['pass'] == "password")) {
-        echo "Welcome, " . $_SESSION['user_name'];
-    } else {
-        echo "Please enter your username:";
-    }
-?>
+                                // Check if the session variable is set
+                                if ($_SESSION['user_name'] == "admin") {
+                                    header("location: ./admin-dashboard/book-issue.php");
+                                    exit();
+                                } else {
+
+                                }
+                            ?>
                              <label for="name">username</label><br>
                              <input type="text" name="user" class="log form-input" id="user"  placeholder="create your username" ><br><br>
 
                              <label for="name">Password</label><br>
-                             <input type="password" name="pass" class="log form-input" id="password-1"  placeholder="create your password"><br><br>
+                             <input type="password" class="log form-input" name="pass" id="password-1"  placeholder="create your password"><br><br>
                              <span><i class="fa-solid fa-eye-slash  eye-d" onmouseup="password()" id="eye-2"></i></span>
                              <span><i class="fa-solid fa-eye  eye-d " id="eye-1" onmousedown="password()" ></i></span>
                                  <input type="submit" value="login"  class="submit" id="submit">
+                                 <a href="./admin-dashboard/book-issue.php">submit</a>
                              <p class="text-center">Don't have a account ? <a href="signup.php">Sign up</a></p>
 
                         </div>

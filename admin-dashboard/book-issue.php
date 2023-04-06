@@ -52,7 +52,7 @@ require_once "config.php";
                 </div>
                 <?php
                 session_start();
-               echo "<div class='sidebar-brand-text mx-3'>".$_SESSION["user_name"]."</div>";
+               echo "<div class='sidebar-brand-text mx-3 text-capitalize'>".$_SESSION["user_name"]."</div>";
                 ?>
             </a>
 
@@ -436,23 +436,31 @@ require_once "config.php";
                    
                     $sql_query = "SELECT * FROM table_2";
                     $sql_result = $conn -> query($sql_query);
-                    $row = $sql_result -> fetch_assoc();
+                    if (!$sql_result) {
+                        // handle query error
+                        echo "NO STUDENT DATA IS ADDED";
+                    } else {
+
+                    
                    echo '<div class="tables" style="overflow-x:auto;">';
                         echo '<table class="datatables" id="datatables">';
                            echo ' <thead>';
                                 echo '<th class="t-head" style="width:3% ;">ID</th>';
-                                echo '<th class="t-head" style="width:17% ;">Name</th>';
+                                echo '<th class="t-head" style="width:19% ;">Name</th>';
                                 echo '<th class="t-head" style="width:10% ;">Student ID</th>';
-                                echo '<th class="t-head" style="width: 13%;">Phone Number</th>';
-                                echo '<th class="t-head" style="width: 17%;">Address</th>';
-                                echo '<th class="t-head" style="width: 10%;">Book</th>';
-                                echo '<th class="t-head" style="width: 10%;">Book ID</th>';
-                                echo '<th class="t-head" style="width:10% ;">Issued Date</th>';
-                                echo '<th class="t-head" style="width: 10%;">Return Date</th>';
+                                echo '<th class="t-head" style="width: 10%;">Phone Number</th>';
+                                echo '<th class="t-head" style="width: 19%;">Address</th>';
+                                echo '<th class="t-head" style="width: 12%;">Book</th>';
+                                echo '<th class="t-head" style="width: 8%;">Book ID</th>';
+                                echo '<th class="t-head" style="width:9% ;">Issued Date</th>';
+                                echo '<th class="t-head" style="width: 9%;">Return Date</th>';
                            echo ' </thead>';
                            echo '<tbody>';
+                    }
+                    
+                    // $row = $sql_result -> fetch_assoc();
                            if ($sql_result -> num_rows > 0) {
-                            while ($row) {
+                            while ($row = $sql_result -> fetch_assoc()) {
                                 echo '<tr>';
                                 echo '<td>'.$row['id']. '</td>';
                                 echo '<td>'.$row['STUDENT_NAME']. '</td>';
@@ -464,10 +472,12 @@ require_once "config.php";
                                 echo '<td>'.$row['ISSUE']. '</td>';
                                 echo '<td>'.$row['RETURN_']. '</td>';
                                 echo '</tr>';
-                              $row = $sql_result -> fetch_assoc();
+                              
                             }
                              
-                           };
+                           } else{
+                            echo "NO ROW ADDED";
+                        };
                           echo '</table>';
 
                            echo'</div>';
