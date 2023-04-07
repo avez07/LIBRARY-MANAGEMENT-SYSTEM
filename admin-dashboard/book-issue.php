@@ -180,8 +180,9 @@ require_once "config.php";
                     <i class="fa-solid fa-database"></i>
                     <span>user database</span></a>
             </li>
+            <a href="../admin-dashboard/partials/logout.php"></a>
             <li class="nav-item active bld">
-                <a class="nav-link" href="../index.php">
+                <a class="nav-link" href="partials/logout.php">
                     <i class="fa-solid fa-right-from-bracket"></i>
                     <span>Logout</span></a>
             </li>
@@ -302,50 +303,7 @@ require_once "config.php";
                            <!-- Button trigger modal -->
 
                     </div>
-                    <?php
-                           
-                                    if ($_SERVER ["REQUEST_METHOD"] == "POST") {
-                                        
-                                        $s_name = $_POST["student-name"];
-                                        $s_id = $_POST["student-id"];
-                                        $s_phone = $_POST["student-phone"];
-                                        $s_addr = $_POST["student-addr"];
-                                        $b_name = $_POST["book-name"];
-                                        $b_id = $_POST["book-id"];
-                                        $i_date = $_POST["issu-date"];
-                                        $r_date = $_POST["ret-date"];
-
-                                        
-
-                                        $conn -> query("CREATE TABLE IF NOT EXISTS table_2(
-                                             id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
-                                         STUDENT_NAME varchar(30) NOT NULL,
-                                          STUDENT_ID INT NOT NUll,
-                                           STUDENT_PHONE INT NOT NUll,
-                                           STUDENT_ADDR varchar(60) NOT NUll,
-                                            BOOK_NAME varchar(30) NOT NULL,
-                                             BOOK_ID INT NOT NUll,
-                                              ISSUE DATE NOT NULL,
-                                               RETURN_ DATE NOT NULL 
-                                               );");
-
-                                        $query_template = $conn -> prepare("INSERT INTO table_2 (STUDENT_NAME , STUDENT_ID , STUDENT_PHONE , STUDENT_ADDR , BOOK_NAME , BOOK_ID , ISSUE , RETURN_) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?)");
-                                        if (!$query_template) {
-                                            die("Error preparing SQL statement: " . $conn->error);
-                                        }
-                                        $result = $query_template -> bind_param('siississ',$s_name, $s_id, $s_phone, $s_addr, $b_name, $b_id, $i_date, $r_date);
-                                       
-                                        if (!$result) {
-                                            die("Error preparing SQL statement: " . $query_template->error);
-                                        }
-                                        $query_template -> execute();
-                                        
-                                        
-                                        
-                                    };
-                                   
-                                ?>
-
+                  
                     <!-- popup modal for add student details for offline book issued -->
                     <div class="modal animate"   id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
                         <div class="modal-dialog  modal-dialog-centered " >
@@ -356,6 +314,7 @@ require_once "config.php";
                                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
+                                    <?php include "partials/student-detail.php"; ?>
 
                                
                                         <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" class="modal-form" onsubmit=" return validate2();">
@@ -442,20 +401,20 @@ require_once "config.php";
                     } else {
 
                     
-                   echo '<div class="tables" style="overflow-x:auto;">';
-                        echo '<table class="datatables" id="datatables">';
-                           echo ' <thead>';
-                                echo '<th class="t-head" style="width:3% ;">ID</th>';
-                                echo '<th class="t-head" style="width:19% ;">Name</th>';
-                                echo '<th class="t-head" style="width:10% ;">Student ID</th>';
-                                echo '<th class="t-head" style="width: 10%;">Phone Number</th>';
-                                echo '<th class="t-head" style="width: 19%;">Address</th>';
-                                echo '<th class="t-head" style="width: 12%;">Book</th>';
-                                echo '<th class="t-head" style="width: 8%;">Book ID</th>';
-                                echo '<th class="t-head" style="width:9% ;">Issued Date</th>';
-                                echo '<th class="t-head" style="width: 9%;">Return Date</th>';
-                           echo ' </thead>';
-                           echo '<tbody>';
+                   echo '<div class="tables" style="overflow-x:auto;">
+                        <table class="datatables" id="datatables">
+                             <thead>;
+                                <th class="t-head" style="width:3% ;">ID</th>
+                                <th class="t-head" style="width:19% ;">Name</th>
+                                <th class="t-head" style="width:10% ;">Student ID</th>
+                                <th class="t-head" style="width: 10%;">Phone Number</th>
+                                <th class="t-head" style="width: 19%;">Address</th>
+                                <th class="t-head" style="width: 12%;">Book</th>
+                                <th class="t-head" style="width: 8%;">Book ID</th>
+                                <th class="t-head" style="width:9% ;">Issued Date</th>
+                                <th class="t-head" style="width: 9%;">Return Date</th>
+                            </thead>
+                            <tbody>';
                     }
                     
                     // $row = $sql_result -> fetch_assoc();
@@ -472,6 +431,7 @@ require_once "config.php";
                                 echo '<td>'.$row['ISSUE']. '</td>';
                                 echo '<td>'.$row['RETURN_']. '</td>';
                                 echo '</tr>';
+                               
                               
                             }
                              

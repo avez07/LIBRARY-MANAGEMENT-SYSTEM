@@ -5,45 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bookbaddies</title>
-    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" href="admin-dashboard/css/style.css">
+    <link rel="stylesheet" href="../admin-dashboard/css/style.css">
 
 </head>
 <body>
-<!-- <form method="post">
-    <input type="text" name="user" class="log form-input" id="user"  placeholder="create your username" ><br><br>
-    <button type="submit">Submit</button>
-</form> -->
-
-
-
     <section>
         <div class="container-fluid">
             <div class="d-flex align-items-center justify-content-center" style="height: 100vh;">
                 <div class="width">
                     <div style="text-align: center;">
-                        <img src="images/book.png" class="img-fluid " alt="logo image" action = "./admin-dashboard/book-issue.php">
+                        <img src="../images/book.png" class="img-fluid " alt="logo image">
                     </div> 
                     <form class="login-form" method="post">
                         <div class="borders">
                             <p class="head">login</p>
                             <?php
-                                session_start();
-                                if(isset($_POST["user"])){
+    session_start();
+    if(isset($_POST["user"])){
+        $_SESSION['user_name'] = $_POST["user"];
+        // Redirect to login page
+        header("Location: login.php");
+        exit();
+    }
+    
+    // Check if the session variable is set and user is admin
+    if (isset($_SESSION['user_name']) && $_SESSION['user_name'] == "admin") {
+        header("Location: ../admin-dashboard/book-issue.php");
+        exit();
+    } 
+?>
 
-                                    $_SESSION['user_name'] = $_POST["user"];
-                                }
-
-                                // Check if the session variable is set
-                                if ($_SESSION['user_name'] == "admin") {
-                                    header("location: ./admin-dashboard/book-issue.php");
-                                    exit();
-                                } else {
-
-                                }
-                            ?>
                              <label for="name">username</label><br>
                              <input type="text" name="user" class="log form-input" id="user"  placeholder="create your username" ><br><br>
 
@@ -61,6 +55,6 @@
             </div>
         </div>
     </section>
-    <script src="script.js"></script>
+    <script src="../script.js"></script>
 </body>
 </html>
