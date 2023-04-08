@@ -7,8 +7,6 @@
                                $username = $_POST["user"];
                                $pass = $_POST["pass1"];
                                $c_pass = $_POST["pass2"];
-                              
-
                                
 
                                $conn -> query("CREATE TABLE IF NOT EXISTS user_0970(
@@ -21,16 +19,17 @@
                                    DATE_TIME DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
                                       );");
 
-                               $result = $conn -> query("INSERT INTO user_0970(STUDENT_NAME , EMAIL_ID , USER_NAME , PASSWORD_1 ,CONFIRM_PASSWORD) VALUES ( '$name', '$email_id', '$username', '$pass', '$c_pass')");
+                               $query = $conn -> query("INSERT INTO user_0970(STUDENT_NAME , EMAIL_ID , USER_NAME , PASSWORD_1 ,CONFIRM_PASSWORD) VALUES ( '$name', '$email_id', '$username', '$pass', '$c_pass')");
                               
                               
-                               if (!$result) {
+                               if (!$query) {
                                    die("Error preparing SQL statement: " .$conn -> error);
                                } else{
                                 $showalert = true;
+                               
                                }
                                
-                               header("location: ../admin-dashboard/signup.php");
+                              
                                
                                
                                

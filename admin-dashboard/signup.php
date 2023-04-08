@@ -18,10 +18,10 @@ require_once "config.php";
 </head>
 <body>
     <?php
-    if ($showalert == true) {
-echo '<div class="alert alert-success alert-dismissible fade show" role="alert text-capitalize">
-  <strong>SUCCESS!</strong> your data is successfully added to the databases now you can login.
-  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    if ($showalert) {
+echo '<div class="alert alert-success alert-dismissible fade show fixed-top text-capitalize" role="alert">
+<strong>SUCCESS!</strong> your data is added to the database , now you allowed to login.
+<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>';
     }
 ?>
@@ -33,7 +33,7 @@ echo '<div class="alert alert-success alert-dismissible fade show" role="alert t
                         <img src="../images/book.png" class="img-fluid " alt="...">
                     </div> 
                    
-                    <form class="signup-form" method = "post" onsubmit="return validate();">
+                    <form class="signup-form" method = "post" onsubmit="">
                         <div class="borders">
                             <p class="head">signup</p>
                              <label for="name">Name</label><br>
