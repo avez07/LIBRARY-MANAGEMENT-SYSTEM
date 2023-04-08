@@ -1,3 +1,6 @@
+<?php
+require_once "config.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -46,7 +49,10 @@
                 <div class="sidebar-brand-icon ">
                     <i class="fa-solid fa-user"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">Ansari Avez</div>
+                <?php
+                session_start();
+               echo "<div class='sidebar-brand-text mx-3 text-capitalize'>".$_SESSION["user_name"]."</div>";
+                ?>
             </a>
 
             <!-- Divider -->
@@ -174,7 +180,7 @@
                     <span>user database</span></a>
             </li>
             <li class="nav-item active bld">
-                <a class="nav-link" href="../index.php">
+                <a class="nav-link" href="./partials/logout.php">
                     <i class="fa-solid fa-right-from-bracket"></i>
                     <span>Logout</span></a>
             </li>
@@ -314,20 +320,49 @@
 
                         </div>
                     </div>
-                    <div class="tables" style="overflow-x:auto;">
-                        <table class="datatables" id="datatables">
-                            <thead>
-                                <th class="t-head" style="width:3% ;">ID</th>
-                                <th class="t-head" style="width:22% ;">Name</th>
-                                <th class="t-head" style="width:21% ;">Email ID</th>
-                                <th class="t-head" style="width: 17%;">Username</th>
-                                <th class="t-head" style="width: 15%;">Password</th>
-                                <th class="t-head" style="width: 15%;">Confirm password</th>
-                               
-                            </thead>
-                        </table>
+                    <?php include "partials/signup-detail.php"; ?>
 
-                    </div>
+                    <?php
+                        $sql_query = "SELECT * FROM user_0970";
+                        $sql_result = $conn->query($sql_query);
+                        
+                        if (!$sql_result) {
+                            echo "NO DATA IS ADDED" . $sql_query->error;
+                        } else {
+                            echo '<div class="tables" style="overflow-x:auto;">
+                                    <table class="datatables" id="datatables">
+                                        <thead>
+                                            <th class="t-head" style="width:3%;">ID</th>
+                                            <th class="t-head" style="width:19%;">Name</th>
+                                            <th class="t-head" style="width:19%;">Email ID</th>
+                                            <th class="t-head" style="width:13%;">Username</th>
+                                            <th class="t-head" style="width:13%;">Password</th>
+                                            <th class="t-head" style="width:13%;">Confirm password</th>
+                                            <th class="t-head" style="width:13%;">DATE & TIME</th>
+                                        </thead>
+                                        <tbody>';
+                            if ($sql_result->num_rows > 0) {
+                                while ($row = $sql_result->fetch_assoc()) {
+                                    echo '<tr>';
+                                    echo '<td>' . $row['id'] . '</td>';
+                                    echo '<td>' . $row['STUDENT_NAME'] . '</td>';
+                                    echo '<td>' . $row['EMAIL_ID'] . '</td>';
+                                    echo '<td>' . $row['USER_NAME'] . '</td>';
+                                    echo '<td>' . $row['PASSWORD_1'] . '</td>';
+                                    echo '<td>' . $row['CONFIRM_PASSWORD'] . '</td>';
+                                    echo '<td>' . $row['DATE_TIME'] . '</td>';
+                                    echo '</tr>';
+                                }
+                            } else {
+                                echo '<tr><td colspan="7">NO ROW ADDED</td></tr>';
+                            }
+                            echo '</tbody></table></div>';
+                        }
+                        
+                        $conn->close();
+                       
+                    ?>
+                   
                 </div>
                
             </div>
@@ -379,19 +414,10 @@
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
 
-    <!-- Page level plugins -->
-    <script src="vendor/chart.js/Chart.min.js"></script>
-
-    <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
-
-    <!-- animation js link -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
+ 
     <!-- common bootstrap and javascript file  -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    <script src="/script.js"></script>
+ 
 
        <!-- custom validation javascript file  -->
        <script src="../script.js"></script>

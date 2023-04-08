@@ -417,7 +417,7 @@ require_once "config.php";
                             <tbody>';
                     }
                     
-                    // $row = $sql_result -> fetch_assoc();
+                    
                            if ($sql_result -> num_rows > 0) {
                             while ($row = $sql_result -> fetch_assoc()) {
                                 echo '<tr>';

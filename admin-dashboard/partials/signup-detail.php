@@ -28,11 +28,6 @@
                                 $showalert = true;
                                
                                }
-                               
-                              
-                               
-                               
-                               
                            };
                           
                        ?>

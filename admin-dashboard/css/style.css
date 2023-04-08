@@ -181,6 +181,9 @@
     word-wrap: break-word;
 
   }
+  #datatables td{
+    text-transform: none !important;
+  }
   th{
     background-color: #0f1b4f;
     color: #fff;

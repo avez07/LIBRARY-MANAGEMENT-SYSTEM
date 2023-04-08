@@ -46,7 +46,7 @@
                              <span><i class="fa-solid fa-eye-slash  eye-d" onmouseup="password()" id="eye-2"></i></span>
                              <span><i class="fa-solid fa-eye  eye-d " id="eye-1" onmousedown="password()" ></i></span>
                                  <input type="submit" value="login"  class="submit" id="submit">
-                                 <a href="./admin-dashboard/book-issue.php">submit</a>
+                                
                              <p class="text-center">Don't have a account ? <a href="signup.php">Sign up</a></p>
 
                         </div>

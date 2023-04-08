@@ -17,14 +17,15 @@ require_once "config.php";
 
 </head>
 <body>
-    <?php
-    if ($showalert) {
-echo '<div class="alert alert-success alert-dismissible fade show fixed-top text-capitalize" role="alert">
-<strong>SUCCESS!</strong> your data is added to the database , now you allowed to login.
-<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>';
-    }
+<?php
+if ($showalert) {
+    echo '<div class="alert alert-success alert-dismissible fade show fixed-top text-capitalize" role="alert">
+    <strong>SUCCESS!</strong> your data is added to the database, now you are allowed to login.
+    <a href=signup.php><button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></a>
+    </div>';
+}
 ?>
+
     <section>
         <div class="container-fluid">
             <div class="d-flex align-items-center justify-content-center" style="height: 100vh;">
