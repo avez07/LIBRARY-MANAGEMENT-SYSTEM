@@ -13,7 +13,7 @@
 
                                
 
-                               $conn -> query("CREATE TABLE IF NOT EXISTS table_2(
+                               $conn -> query("CREATE TABLE IF NOT EXISTS student_issue_detail(
                                     id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
                                 STUDENT_NAME varchar(30) NOT NULL,
                                  STUDENT_ID INT NOT NUll,
@@ -25,7 +25,7 @@
                                       RETURN_ DATE NOT NULL 
                                       );");
 
-                               $query_template = $conn -> prepare("INSERT INTO table_2 (STUDENT_NAME , STUDENT_ID , STUDENT_PHONE , STUDENT_ADDR , BOOK_NAME , BOOK_ID , ISSUE , RETURN_) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?)");
+                               $query_template = $conn -> prepare("INSERT INTO student_issue_detail (STUDENT_NAME , STUDENT_ID , STUDENT_PHONE , STUDENT_ADDR , BOOK_NAME , BOOK_ID , ISSUE , RETURN_) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?)");
                                if (!$query_template) {
                                    die("Error preparing SQL statement: " . $conn->error);
                                }

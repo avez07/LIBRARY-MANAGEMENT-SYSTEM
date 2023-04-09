@@ -191,7 +191,7 @@
     text-align: center;
   }
   table{
-    width: 98%;
+    width: 97%;
     border-collapse: collapse;
     margin: 20px auto;
   }
@@ -201,8 +201,17 @@
     padding-top: 15px;
     border-radius: 5px;
     box-shadow: -6px 6px 20px;
-    height: 75%;
+    min-height: 75%;
+    position: relative;
   }
+  
+  
+  .pagination {
+    position: absolute;
+    bottom: 21px;
+    right: 22px;
+    margin: 20px;
+}
   textarea{
     resize: none;
     height: 130px !important;
