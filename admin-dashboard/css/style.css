@@ -208,13 +208,21 @@
   
   .pagination {
     position: absolute;
-    bottom: 20px;
+    bottom: 25px;
     right: 22px;
     
 }
   textarea{
     resize: none;
     height: 130px !important;
+  }
+  .page-item.active .page-link {
+    background-color: #007bff; /* change to your desired color */
+    color: #fff; /* change to your desired color */
+  }
+  .page-item{
+    cursor: pointer;
+    caret-color: transparent;
   }
   .notes{
     margin-top: 70px;

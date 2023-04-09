@@ -52,6 +52,11 @@ require_once "config.php";
                 </div>
                 <?php
                 session_start();
+                
+
+
+                
+               
                echo "<div class='sidebar-brand-text mx-3 text-capitalize'>".$_SESSION["user_name"]."</div>";
                 ?>
             </a>
@@ -375,23 +380,11 @@ require_once "config.php";
                     <div class="container-fluid  ">
                         <div class="row ">
                             <div class=" col-lg-6 col-md-6 filter " id="filter">
+                               
                                 <label  class="fs-5 text-dark fw-semibold">Show</label>
-                                <select name="datatable" class="select" id="select">
-                                    <option value="50">5</option>
-                                    <option value="50">10</option>
-                                    <option value="50">20</option>                            
-                                    <option value="50">100</option>
-                                </select>
-                                <label class="fs-5 text-dark fw-semibold">entries</label>
-                            </div>
-                            <div class=" col-lg-3 col-sm-3 offset-sm-3 col-md-3 d-flex ">
-                                <p class="fs-5 pe-2 text-dark fw-semibold my-auto" >Search: </p>
-                                <input type="search" class="form-control" id="search">
-                            </div>
-
-                        </div>
-                    </div>
-                    <?php include "partials/book-issue-pageiaon.php"; ?>
+                     <?php
+                    
+                     include "partials/book-issue-pageiaon.php"; ?>
                        
                 </div>
                
@@ -413,6 +406,8 @@ require_once "config.php";
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
+ <!-- Custom scripts for all pages-->
+ <script src="js/sb-admin-2.min.js"></script>
 
 
     <!-- common bootstrap and javascript file  -->
@@ -421,6 +416,9 @@ require_once "config.php";
 
     <!-- custom validation javascript file  -->
       <script src="../script.js"></script>
+      
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 
 
 </body>

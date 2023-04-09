@@ -1,14 +1,36 @@
 
 
 <?php
+$selected_value = isset($_POST['datatable']) ? $_POST['datatable'] : 5;
+echo "<select name='datatable' class='select' id='select'>";
+echo "<option value='5' ". ($selected_value == '5' ? 'selected' : '') .">5</option>";
+echo "<option value='10' ". ($selected_value == '10' ? 'selected' : '') .">10</option>";
+echo "<option value='20' ". ($selected_value == '20' ? 'selected' : '') .">20</option>";
+echo "<option value='100' ". ($selected_value == '100' ? 'selected' : '') .">100</option>";
+echo "</select>";
+         
+
+
+
+     echo     ' <label class="fs-5 text-dark fw-semibold">entries</label>
+       </div>
+       <div class=" col-lg-3 col-sm-3 offset-sm-3 col-md-3 d-flex ">
+           <p class="fs-5 pe-2 text-dark fw-semibold my-auto" >Search: </p>
+           <input type="search" class="form-control" id="search">
+       </div>
+
+   </div>
+</div>';
+
 $sql_query = "SELECT * FROM student_issue_detail";
 $sql_result = $conn->query($sql_query);
 
-
-$result_per_page = 10;                             //set a enteries perpages
-$number_of_result = $sql_result->num_rows;      //dertermine how many row in their on databases
+$result_per_page = $selected_value;
+$number_of_result = $sql_result->num_rows;
 
 $number_of_pages = ceil($number_of_result / $result_per_page);
+
+
 
 
 if (!isset($_GET['pages'])) {
@@ -79,8 +101,8 @@ if (!$sql_result) {
       </li>';
     }
   for ($i = 1; $i <= $number_of_pages; $i++) {
-  
-              echo ' <li class="page-item active"><a class="page-link" href="./book-issue.php?pages=' . $i .'">'. $i .'</a></li>';
+            $active = ($i== $pages) ? "active" : "";
+              echo ' <li class="page-item '.$active.'"><a class="page-link" href="./book-issue.php?pages=' . $i .'">'. $i .'</a></li>';
   }
    
   if ($pages < $number_of_pages) {
