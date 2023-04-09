@@ -28,7 +28,7 @@ if (!$sql_result) {
     // handle query error
     echo "Query execution failed: " . $conn->error;
 } else {
-    echo '<div class="tables mb-5" style="overflow-x:auto;">
+    echo '<div class="tables" style="overflow-x:auto;">
         <table class="datatables" id="datatables">
              <thead>
                 <th class="t-head" style="width:3% ;">ID</th>

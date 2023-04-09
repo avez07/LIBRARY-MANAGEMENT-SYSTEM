@@ -193,7 +193,7 @@
   table{
     width: 97%;
     border-collapse: collapse;
-    margin: 20px auto;
+    margin: 20px auto 70px !important;
   }
   .contain-t{
     border: 1px solid rgb(182, 176, 176);
@@ -208,9 +208,9 @@
   
   .pagination {
     position: absolute;
-    bottom: 21px;
+    bottom: 20px;
     right: 22px;
-    margin: 20px;
+    
 }
   textarea{
     resize: none;
