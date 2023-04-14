@@ -22,21 +22,9 @@
                     <form class="login-form" method="post">
                         <div class="borders">
                             <p class="head">login</p>
-                            <?php
-    session_start();
-    if(isset($_POST["user"])){
-        $_SESSION['user_name'] = $_POST["user"];
-        // Redirect to login page
-        header("Location: login.php");
-        exit();
-    }
-    
-    // Check if the session variable is set and user is admin
-    if (isset($_SESSION['user_name']) && $_SESSION['user_name'] == "admin") {
-        header("Location: ../admin-dashboard/book-issue.php");
-        exit();
-    } 
-?>
+                           <?php
+                           include "partials/login-logics.php";
+                           ?>
 
                              <label for="name">username</label><br>
                              <input type="text" name="user" class="log form-input" id="user"  placeholder="create your username" ><br><br>

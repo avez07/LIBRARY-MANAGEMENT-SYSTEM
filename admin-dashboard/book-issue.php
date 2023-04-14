@@ -52,11 +52,6 @@ require_once "config.php";
                 </div>
                 <?php
                 session_start();
-                
-
-
-                
-               
                echo "<div class='sidebar-brand-text mx-3 text-capitalize'>".$_SESSION["user_name"]."</div>";
                 ?>
             </a>
