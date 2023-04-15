@@ -33,9 +33,11 @@
                               
                                if (!$result) {
                                    die("Error preparing SQL statement: " . $query_template->error);
+                               }else {
+                                $query_template -> execute();
+                              
                                }
-                               $query_template -> execute();
-                               header("location: ../admin-dashboard/book-issue.php");
+                              
                                
                                
                                

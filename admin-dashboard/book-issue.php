@@ -317,7 +317,7 @@ require_once "config.php";
                                     <?php include "partials/student-detail.php"; ?>
 
                                
-                                        <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" class="modal-form" onsubmit=" return validate2();">
+                                        <form action="" method="post" class="modal-form" onsubmit=" return validate2();">
                                         <div class="row">
                                         
                                           <div class="col-lg-6 py-2">
