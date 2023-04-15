@@ -28,7 +28,7 @@ include "../config.php";
 
         $query_template = $conn->prepare("INSERT INTO student_issue_detail (STUDENT_NAME , STUDENT_ID , STUDENT_PHONE , STUDENT_ADDR , BOOK_NAME , BOOK_ID , ISSUE , RETURN_) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?)");
         if (!$query_template) {
-            die("Error preparing SQL statement: " . $conn->error);
+            die("Error preparing SQL statement: " . $conn-> error);
         }
         $result = $query_template->bind_param('siississ', $s_name, $s_id, $s_phone, $s_addr, $b_name, $b_id, $i_date, $r_date);
 
