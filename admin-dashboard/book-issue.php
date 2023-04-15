@@ -314,10 +314,10 @@ require_once "config.php";
                                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <?php include "partials/student-detail.php"; ?>
+                                   
 
                                
-                                        <form action="" method="post" class="modal-form" onsubmit=" return validate2();">
+                                        <form action="./partials/student-detail.php" method="post" class="modal-form" >
                                         <div class="row">
                                         
                                           <div class="col-lg-6 py-2">
@@ -362,7 +362,7 @@ require_once "config.php";
                                           </div>
                                           <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                            <input type="submit" value="Add" class="btn-color sub" >
+                                            <input type="submit" name = "submit" value="Add" class="btn-color sub" >
                                           </div>
                                         </div>
                                     </form>
