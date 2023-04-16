@@ -1,6 +1,8 @@
 <?php
 require_once "config.php";
- include "partials/signup-detail.php";
+require_once "./partials/signup-detail.php";
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,11 +23,10 @@ require_once "config.php";
 if ($showalert) {
     echo '<div class="alert alert-success alert-dismissible fade show fixed-top text-capitalize" role="alert">
     <strong>SUCCESS!</strong> your data is added to the database, now you are allowed to login.
-    <a href=signup.php><button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></a>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>';
 }
 ?>
-
     <section>
         <div class="container-fluid">
             <div class="d-flex align-items-center justify-content-center" style="height: 100vh;">
@@ -34,7 +35,7 @@ if ($showalert) {
                         <img src="../images/book.png" class="img-fluid " alt="...">
                     </div> 
                    
-                    <form class="signup-form" method = "post" onsubmit="">
+                    <form class="signup-form" method = "post" onsubmit="" action="partials/signup-detail.php">
                         <div class="borders">
                             <p class="head">signup</p>
                              <label for="name">Name</label><br>
@@ -71,6 +72,7 @@ if ($showalert) {
 
                         </div>
                     </form>
+                   
                 </div>
             </div>
         </div>

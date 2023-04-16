@@ -23,7 +23,18 @@
                         <div class="borders">
                             <p class="head">login</p>
                            <?php
-                           include "partials/login-logics.php";
+                          require_once "config.php";
+                           
+                            session_start();
+                            if(isset($_POST["user"])){
+                                $_SESSION['user_name'] = $_POST["user"];
+                               
+                            };
+                            include "./partials/login-logics.php";
+
+                           
+                               
+                            
                            ?>
 
                              <label for="name">username</label><br>

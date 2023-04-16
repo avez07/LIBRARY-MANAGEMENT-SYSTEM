@@ -358,6 +358,7 @@ require_once "config.php";
                             }
                             echo '</tbody></table></div>';
                         }
+                        include "partials/login-data-pagination.php"; ?>
                         
                         $conn->close();
                        

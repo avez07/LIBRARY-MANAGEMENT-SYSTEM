@@ -1,7 +1,9 @@
 <?php
+
+
                            $showalert = false;
                            if ($_SERVER ["REQUEST_METHOD"] == "POST") {
-                               
+                            include "../config.php";
                                $name = $_POST["name"];
                                $email_id = $_POST["email"];
                                $username = $_POST["user"];
@@ -25,6 +27,7 @@
                                if (!$query) {
                                    die("Error preparing SQL statement: " .$conn -> error);
                                } else{
+                                header("location: /All-my-projects/LIBRARY-MANAGEMENT-SYSTEM/admin-dashboard/signup.php");
                                 $showalert = true;
                                
                                }
