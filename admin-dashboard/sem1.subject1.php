@@ -1,3 +1,8 @@
+<?php
+require_once "config.php";
+include "partials/login-logics.php";
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -44,11 +49,14 @@
         <ul class="navbar-nav  sidebar sidebar-dark accordion bg-color" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="book-issue.php">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
                 <div class="sidebar-brand-icon">
                     <i class="fa-solid fa-user"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">Ansari Avez</div>
+                <?php
+                session_start();
+               echo "<div class='sidebar-brand-text mx-3 text-capitalize'>".$_SESSION["user_name"]."</div>";
+                ?>
             </a>
 
             <!-- Divider -->
@@ -58,12 +66,16 @@
             <div class="sidebar-heading">
                 Intventory
             </div>
-           
-            <li class="nav-item active bld admin">
+           <?php
+            if ($admin) {
+                echo  ' <li class="nav-item active bld admin">
                 <a class="nav-link" href="book-issue.php">
                     <i class="fa-solid fa-book"></i>
                     <span>Book issued</span></a>
-            </li>
+            </li>';
+            }
+           ?>
+           
             <li class="nav-item active bld">
                 <a class="nav-link" href="inventry.php">
                     <i class="fa-solid fa-warehouse"></i>
@@ -170,13 +182,18 @@
             <div class="sidebar-heading">
                 Interface
             </div>
-            <li class="nav-item active bld admin">
-                <a class="nav-link" href="login.datatable.php">
-                    <i class="fa-solid fa-database"></i>
-                    <span>user database</span></a>
-            </li>
+            <?php
+                if ($admin) {
+                    echo ' <li class="nav-item active bld admin">
+                    <a class="nav-link" href="login.datatable.php">
+                        <i class="fa-solid fa-database"></i>
+                        <span>user database</span></a>
+                </li>';
+                }
+            ?>
+           
             <li class="nav-item active bld">
-                <a class="nav-link" href="../index.php">
+                <a class="nav-link" href="partials/logout.php">
                     <i class="fa-solid fa-right-from-bracket"></i>
                     <span>Logout</span></a>
             </li>
@@ -290,10 +307,14 @@
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800 fw-bold">Sem-1 Subject-2 </h1>
-                         
-                           <button class="d-none d-sm-inline-block btn btn-sm btn-color shadow-sm fs-6 admin" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-regular fa-square-plus pe-2 btn-color">
-                           </i>  Add Referance</button></a>
-                           <!-- Button trigger modal -->
+                         <?php
+                         if ($admin) {
+                           echo '<button class="d-none d-sm-inline-block btn btn-sm btn-color shadow-sm fs-6 admin" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-regular fa-square-plus pe-2 btn-color">
+                           </i>  Add Referance</button></a>';
+                        //    <!-- Button trigger modal -->
+                         }
+                         ?>
+                           
 
                     </div>
 

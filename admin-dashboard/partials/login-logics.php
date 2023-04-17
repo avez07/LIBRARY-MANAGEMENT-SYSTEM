@@ -19,18 +19,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Check if the query returned any rows
     if ($result->num_rows == 1) {
+        $user = true;
         // Redirect the user to the admin dashboard
         header("Location: /All-my-projects/LIBRARY-MANAGEMENT-SYSTEM/admin-dashboard/inventry.php");
         exit();
     } 
-    if (isset($_SESSION['user_name']) && $_SESSION['user_name'] == "admin" && isset($_POST["pass"]) && $_POST["pass"] == "password") {
-        $admin = true;
+    if ($_SESSION['user_name'] == "admin") {
         header("Location: /All-my-projects/LIBRARY-MANAGEMENT-SYSTEM/admin-dashboard/book-issue.php");
         exit();
+       
     } else {
         $show_login_error= true;
     }
 }
+    if (isset($_SESSION['user_name']) && $_SESSION['user_name'] == "admin") {
+            $admin = true;
+    }
 
 
 ?>

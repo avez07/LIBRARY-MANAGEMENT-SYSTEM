@@ -1,5 +1,6 @@
 <?php
 require_once "config.php";
+include "partials/login-logics.php";
 
 ?>
 <!DOCTYPE html>
@@ -64,12 +65,15 @@ require_once "config.php";
             <div class="sidebar-heading">
                 Intventory
             </div>
-           
-            <li class="nav-item active bld">
+           <?php
+           if ($user) {
+           echo ' <li class="nav-item active bld">
                 <a class="nav-link" href="book-issue.php">
                     <i class="fa-solid fa-book"></i>
                     <span>Book issued</span></a>
-            </li>
+            </li>';
+           }
+            ?>
             <li class="nav-item active bld">
                 <a class="nav-link" href="inventry.php">
                     <i class="fa-solid fa-warehouse"></i>

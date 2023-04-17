@@ -50,7 +50,7 @@
         
         
         <script>
-            function openmodal(student_name, student_id, addr, phone, book_id, book_name, issue_date, return_date) {
+            function openmodal(student_name, student_id, phone, addr,  book_name ,book_id, issue_date, return_date) {
                 document.getElementById('studentname').innerHTML = student_name;
                 document.getElementById('student_id').innerHTML = student_id;
                 document.getElementById('phone').innerHTML = phone;
@@ -147,7 +147,7 @@
                     echo '<td>' . $row['STUDENT_ADDR'] . '</td>';
                     echo '<td>' . $row['BOOK_NAME'] . '</td>';
                     echo '<td> <span class="text-dark fw-bold" onClick= "openmodal(\'' . $row['STUDENT_NAME'] . '\',\'' . $row['STUDENT_ID'] . '\',\'' . $row['STUDENT_PHONE'] . '\',\'' . $row['STUDENT_ADDR'] . '\',\'' . $row['BOOK_NAME'] . '\',\'' . $row['BOOK_ID'] . '\',\'' . $row['ISSUE'] . '\',\'' . $row['RETURN_'] . '\')">view</span></td>';
-                    echo '<td>' . $row['ISSUE'] . '</td>';
+                    echo '<td><a href = "./actions/issue-delete.php?id='. $row['id'] .'">delete</a></td>';
                     echo '<td>' . $row['RETURN_'] . '</td>';
                     echo '</tr>';
                 
@@ -158,53 +158,9 @@
             }
         
             echo '</tbody></table></div></div>';
-        
-        
-        
-            // Get the id of the row to be displayed
         }
         
-        if ($user) { //this is for user
-        
-            echo '<div class="tables" style="overflow-x:auto;">
-                    <table class="datatables" id="datatables">
-                         <thead>
-                            <th class="t-head" style="width:3% ;">ID</th>
-                            <th class="t-head" style="width:19% ;">Name</th>
-                            <th class="t-head" style="width:10% ;">Student ID</th>
-                            <th class="t-head" style="width: 10%;">Phone Number</th>
-                            <th class="t-head" style="width: 19%;">Address</th>
-                            <th class="t-head" style="width: 12%;">Book</th>
-                            <th class="t-head" style="width: 8%;">Book ID</th>
-                            <th class="t-head" style="width:9% ;">Issued Date</th>
-                            <th class="t-head" style="width: 9%;">Return Date</th>
-                        </thead>
-                        <tbody>';
-        
-        
-            if ($sql_result->num_rows > 0) {
-                while ($row = $sql_result->fetch_assoc()) {
-                    echo '<tr>';
-                    echo '<td>' . $row['id'] . '</td>';
-                    echo '<td>' . $row['STUDENT_NAME'] . '</td>';
-                    echo '<td>' . $row['STUDENT_ID'] . '</td>';
-                    echo '<td>' . $row['STUDENT_PHONE'] . '</td>';
-                    echo '<td>' . $row['STUDENT_ADDR'] . '</td>';
-                    echo '<td>' . $row['BOOK_NAME'] . '</td>';
-                    echo '<td>' . $row['BOOK_ID'] . '</td>';
-                    echo '<td>' . $row['ISSUE'] . '</td>';
-                    echo '<td>' . $row['RETURN_'] . '</td>';
-                    echo '</tr>';
-                }
-            } else {
-                echo "No rows found";
-            }
-        
-        
-        
-            echo '</tbody></table></div></div>';
-        }
-        //this is for user
+     
         echo ' 
             <nav aria-label="...">
             <ul class="pagination float-right me-3 mt-auto">';
