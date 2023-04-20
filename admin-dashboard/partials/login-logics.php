@@ -5,6 +5,7 @@ $admin = false;
 $user = false;
 $show_login_error= false;
 
+
 // Check if the form was submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get the username and password from the form
@@ -23,6 +24,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Redirect the user to the admin dashboard
         header("Location: /All-my-projects/LIBRARY-MANAGEMENT-SYSTEM/admin-dashboard/inventry.php");
         exit();
+    } else{
+        $show_login_error = true;
+     
     } 
     if ($_SESSION['user_name'] == "admin" &&  $_SESSION['password'] == "password") {
         header("Location: /All-my-projects/LIBRARY-MANAGEMENT-SYSTEM/admin-dashboard/book-issue.php");
@@ -33,6 +37,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 if (isset($_SESSION['user_name']) && $_SESSION['user_name'] == "admin"  && isset($_SESSION['password']) && $_SESSION['password'] == "password") {
     $admin = true;
 }
+
+
+
+// start the session
+
+
+// check if the session is not set or has been destroyed or unset
+
+
 
 
 ?>

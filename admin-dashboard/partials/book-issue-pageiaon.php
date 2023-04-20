@@ -60,7 +60,7 @@
                 document.getElementById('issue_date').innerHTML = issue_date;
                 document.getElementById('return_date').innerHTML = return_date;
                 $('#exampleModal1').modal('show')
-                console.log(student_id);
+               
             }
         </script>
         <script>
@@ -142,9 +142,7 @@
                         <th class="t-head" style="width: 10%;">Phone Number</th>
                         <th class="t-head" style="width: 19%;">Address</th>
                         <th class="t-head" style="width: 12%;">Book</th>
-                        <th class="t-head" style="width: 8%;">Book ID</th>
-                        <th class="t-head" style="width:9% ;">Issued Date</th>
-                        <th class="t-head" style="width: 9%;">Return Date</th>
+                        <th class="t-head" colspan="3" style="width: 37%;">Actions</th>
                     </thead>
                     <tbody>';
         

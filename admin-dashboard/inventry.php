@@ -3,6 +3,11 @@
 require_once "config.php";
 include "partials/login-logics.php";
 
+if(!isset($_SESSION['user_name']) || empty($_SESSION['user_name'])) {
+    // redirect to login page
+    header("Location: /All-my-projects/LIBRARY-MANAGEMENT-SYSTEM/admin-dashboard/login.php");
+    exit();
+  }
 
 ?>
 <!DOCTYPE html>
