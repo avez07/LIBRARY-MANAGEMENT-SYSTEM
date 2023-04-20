@@ -1,6 +1,8 @@
 <?php
+ session_start();
 require_once "config.php";
 include "partials/login-logics.php";
+
 
 ?>
 <!DOCTYPE html>
@@ -53,7 +55,7 @@ include "partials/login-logics.php";
                     <i class="fa-solid fa-user"></i>
                 </div>
                 <?php
-                session_start();
+               
                echo "<div class='sidebar-brand-text mx-3 text-capitalize'>".$_SESSION["user_name"]."</div>";
                 ?>
             </a>
@@ -66,7 +68,7 @@ include "partials/login-logics.php";
                 Intventory
             </div>
            <?php
-           if ($user) {
+           if ($admin) {
            echo ' <li class="nav-item active bld">
                 <a class="nav-link" href="book-issue.php">
                     <i class="fa-solid fa-book"></i>

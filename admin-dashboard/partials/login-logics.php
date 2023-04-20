@@ -24,17 +24,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: /All-my-projects/LIBRARY-MANAGEMENT-SYSTEM/admin-dashboard/inventry.php");
         exit();
     } 
-    if ($_SESSION['user_name'] == "admin") {
+    if ($_SESSION['user_name'] == "admin" &&  $_SESSION['password'] == "password") {
         header("Location: /All-my-projects/LIBRARY-MANAGEMENT-SYSTEM/admin-dashboard/book-issue.php");
         exit();
        
-    } else {
-        $show_login_error= true;
-    }
+    } 
 }
-    if (isset($_SESSION['user_name']) && $_SESSION['user_name'] == "admin") {
-            $admin = true;
-    }
+if (isset($_SESSION['user_name']) && $_SESSION['user_name'] == "admin"  && isset($_SESSION['password']) && $_SESSION['password'] == "password") {
+    $admin = true;
+}
 
 
 ?>

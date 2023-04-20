@@ -63,6 +63,18 @@
                 console.log(student_id);
             }
         </script>
+        <script>
+            function alert_msg(){
+                if(window.confirm("Are You Sure , You Want To `DELETE` This Record")){
+                    alert("After `DELETE` You Cannot Undo");
+                } else{
+                    return false;
+                }
+
+               
+
+            }
+        </script>
         
         <?php
         $admin = false;
@@ -147,7 +159,7 @@
                     echo '<td>' . $row['STUDENT_ADDR'] . '</td>';
                     echo '<td>' . $row['BOOK_NAME'] . '</td>';
                     echo '<td> <span class="text-dark fw-bold" onClick= "openmodal(\'' . $row['STUDENT_NAME'] . '\',\'' . $row['STUDENT_ID'] . '\',\'' . $row['STUDENT_PHONE'] . '\',\'' . $row['STUDENT_ADDR'] . '\',\'' . $row['BOOK_NAME'] . '\',\'' . $row['BOOK_ID'] . '\',\'' . $row['ISSUE'] . '\',\'' . $row['RETURN_'] . '\')">view</span></td>';
-                    echo '<td><a href = "./actions/issue-delete.php?id='. $row['id'] .'">delete</a></td>';
+                    echo '<td><a href = "./actions/issue-delete.php?id='. $row['id'] .'" onClick = "return alert_msg()">delete</a></td>';
                     echo '<td>' . $row['RETURN_'] . '</td>';
                     echo '</tr>';
                 

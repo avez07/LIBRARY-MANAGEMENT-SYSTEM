@@ -26,8 +26,10 @@
                           require_once "config.php";
                            
                             session_start();
-                            if(isset($_POST["user"])){
+                            if(isset($_POST["user"]) && isset($_POST["pass"])){
                                 $_SESSION['user_name'] = $_POST["user"];
+                                $_SESSION['password'] = $_POST["pass"];
+
                                
                             };
                             include "./partials/login-logics.php";
