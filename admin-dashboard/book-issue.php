@@ -35,6 +35,8 @@ if(!isset($_SESSION['user_name']) || empty($_SESSION['user_name'])) {
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/admin-dashboard/css/style.css">
+
     <link rel="stylesheet" href="css/sb-admin-2.css">
     <link rel="stylesheet" href="css/style.css">
     <!-- <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet"> -->
@@ -326,9 +328,6 @@ if(!isset($_SESSION['user_name']) || empty($_SESSION['user_name'])) {
                                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                   
-
-                               
                                         <form action="./partials/student-detail.php" method="post" class="modal-form" >
                                         <div class="row">
                                         
