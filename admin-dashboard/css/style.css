@@ -225,7 +225,7 @@
     caret-color: transparent;
   }
   .notes{
-    margin-top: 70px;
+   
     padding: 20px;
     background-color: #faf6f6;
     color: black;
@@ -297,12 +297,28 @@
   position: absolute;
     left: 23px;
 }
-.veiw{
-  color: #000;
-  font-size: 20px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
+.page{
+  position: absolute;
+    bottom: 15px !important;
+    right: 22px;
 }
+.veiw{
+  color: #000 !important;
+  font-size: 13px !important;
+  margin-right: 7px;
+
+  
+}
+.veiw-text{
+  font-size: 16px !important;
+  color: #000 !important;
+  font-weight: 600;
+  cursor: pointer;
+}
+.veiw-text:hover{
+  text-decoration: 1px solid black;
+}
+
 
 @media only screen and (max-width: 400px){
   .tv-img {

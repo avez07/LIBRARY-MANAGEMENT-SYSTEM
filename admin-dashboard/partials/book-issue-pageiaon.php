@@ -162,7 +162,7 @@ if ($admin) {
             echo '<td>' . $row['STUDENT_PHONE'] . '</td>';
             echo '<td>' . $row['STUDENT_ADDR'] . '</td>';
             echo '<td>' . $row['BOOK_NAME'] . '</td>';
-            echo '<td > <span class = "veiw" onClick= "openmodal(\'' . $row['STUDENT_NAME'] . '\',\'' . $row['STUDENT_ID'] . '\',\'' . $row['STUDENT_PHONE'] . '\',\'' . $row['STUDENT_ADDR'] . '\',\'' . $row['BOOK_NAME'] . '\',\'' . $row['BOOK_ID'] . '\',\'' . $row['ISSUE'] . '\',\'' . $row['RETURN_'] . '\')"><span><i class="fa-solid fa-eye text-dark"></i></span>view</span></td>';
+            echo '<td class="text-center"><span class = "veiw-text" onClick= "openmodal(\'' . $row['STUDENT_NAME'] . '\',\'' . $row['STUDENT_ID'] . '\',\'' . $row['STUDENT_PHONE'] . '\',\'' . $row['STUDENT_ADDR'] . '\',\'' . $row['BOOK_NAME'] . '\',\'' . $row['BOOK_ID'] . '\',\'' . $row['ISSUE'] . '\',\'' . $row['RETURN_'] . '\')"><span class= "veiw"><i class="fa-solid fa-eye "></i></span>view</span></td>';
             echo '<td><a href = "./actions/issue-delete.php?id=' . $row['id'] . '" onClick = "return alert_msg()">delete</a></td>';
 
             echo '<td><a href="./actions/issue-edit.php?id=' . $row['id'] . '&sn=' . $row['STUDENT_NAME'] .

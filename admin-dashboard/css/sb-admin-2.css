@@ -4751,7 +4751,9 @@ input[type="button"].btn-block {
 .breadcrumb-item.active {
   color: #858796;
 }
-
+img.imge-size {
+  height: 164px !important;
+}
 
 
 .page-link {

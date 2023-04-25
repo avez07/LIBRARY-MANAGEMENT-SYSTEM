@@ -1,6 +1,5 @@
 <?php
  session_start();
-require_once "config.php";
 include "partials/login-logics.php";
 
 if(!isset($_SESSION['user_name']) || empty($_SESSION['user_name'])) {
@@ -38,11 +37,7 @@ if(!isset($_SESSION['user_name']) || empty($_SESSION['user_name'])) {
     <link rel="stylesheet" href="css/sb-admin-2.css">
     <link rel="stylesheet" href="css/style.css">
     <!-- <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet"> -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.2/css/jquery.dataTables.css">
-
-
-    <!-- animation links -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+   
 
 </head>
 
@@ -240,6 +235,7 @@ if(!isset($_SESSION['user_name']) || empty($_SESSION['user_name'])) {
                             </div>
                         </div>
                     </form>
+                   
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ">
@@ -334,40 +330,40 @@ if(!isset($_SESSION['user_name']) || empty($_SESSION['user_name'])) {
                                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                        <form action="" class="modal-form" onsubmit="return Video() && Pdf();">
+                                        <form action="partials/subject-detail.php" method="post" class="modal-form" enctype="multipart/form-data" onsubmit="//return Video() && Pdf();">
                                         <div class="row">
                                             <div class="col-lg-6 py-2">
                                                 <label for="details" class="label-i"> video title</label>
-                                                <input type="text" class="modal-input form-control" id="vid-t1" placeholder="Enter video title">
+                                                <input type="text" name="video-titlle" class="modal-input form-control" id="vid-t1" placeholder="Enter video title">
                                                 <span class="fw-semibold text-danger" id="vid-t"></span>
                                              </div>
                                              <div class="col-lg-6 py-2">
                                                 <label for="details" class="label-i"> Notes title</label>
-                                                <input type="text" class="modal-input form-control" id="not-t1"  placeholder="Enter Notes title">
+                                                <input type="text" class="modal-input form-control" name="note-titlle" id="not-t1"  placeholder="Enter Notes title">
                                                 <span class="fw-semibold text-danger" id="not-t"></span>
                                              </div>
                                           <div class="col-lg-6 col-md-6">
                                           <label for="details" class="label-i">Add video</label>
-                                          <input type="file" class="modal-input custom" id="video" >
+                                          <input type="file" name="video" class="modal-input custom" id="video" >
                                           <span><i class="fa-sharp fa-solid fa-cloud-arrow-up icons"></i></span>
                                           <span class="text-danger fw-semibold position" id="vid1"></span>
 
                                           </div>
                                           <div class="col-lg-6 col-md-6">
                                             <label for="details" class="label-i">Add Notes</label>
-                                            <input type="file" class="modal-input custom" id="pdf"  multiple>
+                                            <input type="file" name="note" class="modal-input custom" id="pdf"  multiple>
                                             <span><i class="fa-solid fa-file-pdf icons"></i></span>
                                             <span class="text-danger fw-semibold  position" id="pd"></span>
                                           </div>
                                           <div class="col-lg-12">
                                             <label for="details" class="label-i text-capitalize">Add thamb nail</label>
-                                            <input type="file" class="modal-input custom" id="thumb"  multiple>
+                                            <input type="file" name="tambnail" class="modal-input custom" id="thumb"  multiple>
                                             <span><i class="fa-solid fa-file-pdf icons"></i></span>
                                             <span class="text-danger fw-semibold " id="tum"></span>
                                           </div>
                                           <div class="col-lg-12">
-                                          <label for="details" class="label-i">Discription</label>
-                                          <textarea type="text" class="modal-input form-control" placeholder="Add some discription about your reference"></textarea>
+                                          <label for="details"  class="label-i">Discription</label>
+                                          <textarea type="text" name="description" class="modal-input form-control" placeholder="Add some discription about your reference"></textarea>
                                           </div>
                                          
                                           <div class="modal-footer">
@@ -383,7 +379,7 @@ if(!isset($_SESSION['user_name']) || empty($_SESSION['user_name'])) {
                 </div>
                 <div class="contain-t ">
                     <div class="container-fluid  ">
-                        <div class="row ">
+                        <div class="row mb-5">
                             <div class=" col-lg-6 col-md-6 filter " id="filter">
                                 <label  class="fs-5 text-dark fw-semibold">Show</label>
                                 <select name="datatable" class="select" id="select">
@@ -403,22 +399,11 @@ if(!isset($_SESSION['user_name']) || empty($_SESSION['user_name'])) {
                     </div>
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-4">
-                                <div class="card notes pb-0">
-                                    <img src="../images/tambnail-example.jpg" alt="tambnail image">
-                                    <div class="card-body">
-                                        <div class="d-flex justify-content-between">
-                                            <h4 class="card-title fw-semibold">Practical 1</h4>
-                                            <span style="cursor: pointer;"><i class="fa-solid fa-circle-play text-danger fs-2"></i></span>
-                                        </div>
-                                        <p class="fs-5 text-capitalize fw-semibold py-3">dail pad</p>
-                                      <a href="#" class="btn btn-primary text-capitalize float-end"  data-bs-toggle="modal" data-bs-target="#session">view session</a>
-                                    </div>
-                                  </div>
-                            </div>
-                            </div>
+                       <?php include  "partials/subject-pagination.php"?>
+                        </div>
                         </div>
                         <!-- madal for session  -->
+                    <div class="container">
                         <div class="Session">
                             <div class="modal animate" id="session" tabindex="-1" aria-labelledby="exampleModalLabe" aria-hidden="true" style = "ov">
                                 <div class="modal-dialog modal-lg modal-dialog-centered">
