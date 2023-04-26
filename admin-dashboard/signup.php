@@ -35,7 +35,7 @@ if ($showalert) {
                         <img src="../images/book.png" class="img-fluid " alt="...">
                     </div> 
                    
-                    <form class="signup-form" method = "post" onsubmit="" action="partials/signup-detail.php">
+                    <form class="signup-form" method = "post" onsubmit="return validate()" action="partials/signup-detail.php">
                         <div class="borders">
                             <p class="head">signup</p>
                              <label for="name">Name</label><br>
@@ -55,8 +55,8 @@ if ($showalert) {
 
                              <label for="pass1">Password</label><br>
                              <input type="password" class="sign form-input" name="pass1" id="password1" placeholder="create your password">
-                             <span><i class="fa-solid fa-eye-slash  eye-f" onclick="password2()" id="eye-2"></i></span>
-                             <span><i class="fa-solid fa-eye  eye-f " id="eye-1" onclick="password2()" ></i></span>
+                             
+                            
                              <p class="text-danger fw-semibold" id="pass1"></p>
 
 

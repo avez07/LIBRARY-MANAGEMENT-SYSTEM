@@ -330,7 +330,7 @@ if(!isset($_SESSION['user_name']) || empty($_SESSION['user_name'])) {
                                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                        <form action="partials/subject-detail.php" method="post" class="modal-form" enctype="multipart/form-data" onsubmit="//return Video() && Pdf();">
+                                        <form action="partials/subject-detail.php" method="post" class="modal-form" enctype="multipart/form-data" onsubmit="return Video() && Pdf();">
                                         <div class="row">
                                             <div class="col-lg-6 py-2">
                                                 <label for="details" class="label-i"> video title</label>
